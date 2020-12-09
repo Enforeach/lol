@@ -1,6 +1,3 @@
-<?php
-$plus = $this->m_penline->getCountPlus();
-?>
 
 <style>
 .sub-menu{
@@ -30,20 +27,20 @@ $plus = $this->m_penline->getCountPlus();
         <div class="nav-link">
           <div class="user-wrapper">
             <div>
-              <a href="<?= site_url('images/operator/'.$photo); ?>">
+              <a href="<?= site_url('images/icon_user.png'); ?>">
                         <img id ="gambarmu"
                         style="   width: 40px;
                         height: 40px;
                         border-radius: 50%;
                         object-fit: cover;
                         border: 0.1px solid gray"
-                        src="<?= site_url('images/operator/'.$photo); ?>" alt="">
+                        src="<?= site_url('images/icon_user.png'); ?>" alt="">
                 </a>
             </div>
             <div class="text-wrapper">
-              <p class="profile-name" ><?= $NAMA_SINGKAT; ?></p>
+              <p class="profile-name" ><?= $nama_lengkap ?></p>
               <div>
-                <small class="designation text-muted" style="text-transform: uppercase;letter-spacing: 1px;"><?= $POSISI; ?></small>
+                <small class="designation text-muted" style="text-transform: uppercase;letter-spacing: 1px;"><?= $username ?></small>
                 <span class="status-indicator online"></span>
               </div>
             </div>
@@ -59,64 +56,40 @@ $plus = $this->m_penline->getCountPlus();
       </li>
 
       <li class="nav-item"> 
-        <a class="nav-link" href="<?= site_url('P_online') ?>">
+        <a class="nav-link" href="<?= site_url('User') ?>">
           <i class="menu-icon mdi mdi-account-multiple-plus"></i>
-          <span class="menu-title">Pendaftaran Online</span>
-          <?php if ($plus > 0) { ?>
-            
+          <span class="menu-title">User</span>
+
           <span class="badge" style="
           background: red; border-radius: 30px; color: #fff; font-size: 10px;
           min-width: 18px;
           padding: 2px;
-          text-align: center;"><?= $plus ?></span>
-          <?php } ?>
+          text-align: center;">total</span>
         </a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link " data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="ui-basic">
-          <i class="menu-icon  mdi mdi-content-copy"></i>
-          <span class="menu-title">Master Data</span>
-          <i class="menu-arrow"></i>
+      <li class="nav-item"> 
+        <a class="nav-link" href="<?= site_url('Biodata') ?>">
+          <i class="menu-icon mdi mdi-message-text-outline"></i>
+          <span class="menu-title">Biodata</span>
         </a>
-        <div class="collapse" id="master">
-          <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Anggota') ?>">
-              <i class="menu-icon mdi mdi-account-circle"></i>
-              Data anggota</a>
-            </li>
-          </ul>
-          <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Wilayah') ?>">
-              <i class="menu-icon  mdi mdi-google-maps"></i>Wilayah</a>
-            </li>
-          </ul>
-          <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-              <a class="nav-link" data-toggle="tooltip" title="kepala organisasi dan anggota"
-              href="<?= site_url('Korka') ?>">
-              <i class="menu-icon  mdi mdi-clipboard-account"></i>
-              Kepala org & agt</a>
-            </li>
-          </ul>
-        </div>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link " data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-          <i class="menu-icon mdi mdi-locker-multiple"></i>
-          <span class="menu-title">Fungsi</span>
-          <i class="menu-arrow"></i>
+      <li class="nav-item"> 
+        <a class="nav-link" href="<?= site_url('Pengembang') ?>">
+          <i class="menu-icon mdi mdi-comment-account-outline"></i>
+          <span class="menu-title">Pengembang</span>
         </a>
-        <div class="collapse" id="ui-basic">
-          <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Operator') ?>"><i class="menu-icon  mdi mdi-clipboard-account"></i>Operator</a>
-            </li>
-          </ul>
-        </div>
       </li>
-    </ul>
+      <li class="nav-item"> 
+        <a class="nav-link" href="<?= site_url('Rujukan') ?>">
+          <i class="menu-icon mdi mdi-debug-step-over"></i>
+          <span class="menu-title">Rujukan</span>
+        </a>
+      </li>
+      <li class="nav-item"> 
+        <a class="nav-link footer" href="<?= site_url('Auth/logout') ?>">
+          <i class="menu-icon mdi mdi-logout text-danger"></i>
+          <span class="menu-title">Log Out</span>
+        </a>
+      </li>
 </nav>

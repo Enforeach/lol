@@ -71,22 +71,7 @@ class M_penline extends CI_Model
     $q = $this->db->get()->row();
     return $q->total;
   }  
-  public function getCountPlus()
-  {
-    $this->db->select("count(ID) as total");
-    $this->db->from("dsosys_pendaftaran_online");
-    $this->db->where("STATUS_ACC = 1");
-    $q = $this->db->get()->row();
-    return $q->total;
-  }
-  public function getCountAcc()
-  {
-    $this->db->select("count(ID) as total");
-    $this->db->from("dsosys_pendaftaran_online");
-    $this->db->where("STATUS_ACC = 2");
-    $q = $this->db->get()->row();
-    return $q->total;
-  }
+
   public function up_penline($id)
   {
     $data = array(

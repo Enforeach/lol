@@ -16,16 +16,8 @@ class Core extends CI_Controller {
 
 	public function renderpage($view, $datas = array())
 	{
-		$data['NAMA_SINGKAT'] = $this->session->userdata('NAMA_SINGKAT');
-		$data['POSISI'] = $this->session->userdata('POSISI');
-		$data['NAMA_LENGKAP'] = $this->session->userdata('NAMA_LENGKAP');
-		$data['PASSWORD'] = $this->session->userdata('PASSWORD');
-		$data['ALAMAT'] = $this->session->userdata('ALAMAT');
-		$data['JAM_KERJA'] = $this->session->userdata('JAM_KERJA');
-		$data['photo'] = $this->session->userdata('FOTO');
-		$data['KOTA'] = $this->session->userdata('KOTA');
-		$data['EMAIL'] = $this->session->userdata('EMAIL');		
-		$data['NOMOR_TELEPHON'] = $this->session->userdata('NOMOR_TELEPHON');
+		$data['nama_lengkap'] = $this->session->userdata('nama_lengkap');
+		$data['username'] = $this->session->userdata('username');
 
 		$this->load->view('template/head', $data);
 		$this->load->view('template/header', $data);
