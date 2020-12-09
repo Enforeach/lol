@@ -11,6 +11,16 @@ class M_user extends CI_Model
   public function _post($name , $xss = true){
     return $this->input->post($name , $xss);
   }
+    public function addPenAng()
+  {
+
+    $data = array(
+      'username' => $this->input->post('username'),
+      'password' => md5("akusayangkamu:*".$this->input->post('password')),
+      'nama_lengkap' => $this->input->post('nama_lengkap')
+    );
+    return $this->db->insert("tb_siswa", $data);
+  }
   public function set($id)
   {
     $this->db->select("*");
@@ -43,22 +53,16 @@ class M_user extends CI_Model
     $password = $this->input->post('password');
 
     $this->db->select("*");
-    $this->db->from("dsosys_operator");
-    $this->db->where("NAMA_SINGKAT", $username);
+    $this->db->from("tb_siswa");
+    $this->db->where("username", $username);
     $query = $this->db->get()->row();
     if($query != null){
-      if(md5($password) == $query->PASSWORD){
+      if(md5("akusayangkamu:*".$password) == $query->password){
         $data = array(
           'isLogin' => true,
-          'NAMA_SINGKAT' => $query->NAMA_SINGKAT,
-          'NAMA_LENGKAP' => $query->NAMA_LENGKAP,
-          'POSISI' => $query->POSISI,
-          'JAM_KERJA' => $query->JAM_KERJA,
-          'KOTA' => $query->KOTA,
-          'NOMOR_TELEPHON' => $query->NOMOR_TELEPHON,
-          'ALAMAT' => $query->ALAMAT,
-          'EMAIL' => $query->EMAIL,
-'FOTO' => $query->FOTO.'.'.$ext
+          'username' => $query->username,
+          'nama_lengkap' => $query->nama_lengkap,
+          'foto' => $query->foto.'.'.$ext
         );
         $this->session->set_userdata($data);
         return true;
