@@ -75,13 +75,13 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'dso.ip-dynamic.com',
-	'username' => 'teamci',
-	'password' => 'teamci',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	//'hostname' => 'localhost',
 	//'username' => 'root',
 	//'password' => '',
-	'database' => 'dsodb_sia',
+	'database' => 'db_spss',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
