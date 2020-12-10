@@ -15,11 +15,19 @@ class M_user extends CI_Model
   {
 
     $data = array(
-      'username' => $this->input->post('username'),
+      'username' => strtolower($this->input->post('username')),
       'password' => md5("akusayangkamu:*".$this->input->post('password')),
       'nama_lengkap' => $this->input->post('nama_lengkap')
     );
     return $this->db->insert("tb_siswa", $data);
+  }
+    public function getUsername($db, $where)
+  {
+    $this->db->select("count(*) as total");
+    $this->db->from($db);
+    $this->db->where("username", $where);
+    $q = $this->db->get()->row();
+    return $q->total;
   }
   public function set($id)
   {

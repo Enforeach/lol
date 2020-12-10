@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    SIPS
+    SPSS - Pendaftaran Online
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
   name='viewport' />
@@ -257,7 +257,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand scroll" href="#bgne" rel="tooltip" style="color: rgb(77, 77, 77) !important" data-placement="bottom">
-          SIPS
+          SPSS
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" style="color: black">
@@ -293,16 +293,16 @@
           <!-- <img src="assets/lpage/img/pro.png" id="imgne" style="width: 114%; margin-top: -4%"> -->
         </div>
         <div class="col-xl-6 order-xl-first">
-          <h1 id="text1">Hai, Kami dari SIPS</h1>
+          <h1 id="text1">Hai, Kami dari SPSS</h1>
           <br>
           <h5 id="text2">Daftarkan diri anda untuk menjadi bagian dari kami.</h5>
           <h5 id="text3">Silahkan lanjutkan dengan mengklik tombol ini.</h5>
           <br>
-          <button type="button" id="btn-daftar" href="#regis" class="btn btn-info scroll btn-round mb-5 textq">Registrasi</button>
+          <button type="button" id="btn-daftar" href="#regis" class="btn btn-primary scroll btn-round mb-5 textq">Registrasi</button>
         </div>
       </div>
     </div>
-    <h6 class="category category-absolute" id="dsosia" style="color: #1b7fd9;">Registrasi SIPS
+    <h6 class="category category-absolute" id="dsosia" style="color: gray;">Registrasi SPSS
     </h6>
   </div>
   <!-- end header  -->
@@ -311,7 +311,7 @@
   <div class="container" id="alur">
     <div class="row">
       <div class="col-md-12 mt-5 text-center">
-        <h2 class="title text-center" id="alr1">SISTEM PEMBERANTASAN SURAT</h2>
+        <h2 class="title text-center" id="alr1">SISTEM PEMBERANTASAN SURAT SETAN</h2>
       </div>
     </div>
     <div class="jumbotron" style="background-color: transparent !important; margin-top: -5%; background-position-x: 100px;">
@@ -322,9 +322,9 @@
               <i class="nc-icon nc-single-copy-04" style="color: #53bedb;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #53bedb; font-weight: bolder">Registrasi</h4>
+              <h4 class="info-title" style="color: #53bedb; font-weight: bolder">Daftar Online</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Registrasi melalui website ini dengan mengisi data yang diperlukan. <a href="#regis" class="scroll" style="color: #53bedb">form pendaftaran di bawah ini.</a>
+              <p style="font-weight: bolder" id="deskripsi2">Daftar online melalui website ini dengan mengisi data yang diperlukan. <a href="#regis" class="scroll" style="color: #53bedb">form pendaftaran di bawah ini.</a>
               </p>
             </div>
           </div>
@@ -332,24 +332,24 @@
         <div class="col-md-4" id="alur-txt1">
           <div class="info">
             <div class="icon icon-danger text-center">
-              <i class="nc-icon nc-email-85" style="color: #e0d324;"></i>
+              <i class="nc-icon nc-watch-time" style="color: #e0d324;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #e0d324; font-weight: bolder">Surat</h4>
+              <h4 class="info-title" style="color: #e0d324; font-weight: bolder">Pemeriksaan Data</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Website ini dapat membuat surat Pribadi, Dinas, & Niaga lebih efektif.</p>
+              <p style="font-weight: bolder" id="deskripsi2">Data akan diperiksa oleh tim kami pastikan data yang diisi benar dan dapat dipertanggung jawabkan.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4" id="alur-txt2">
           <div class="info">
             <div class="icon icon-danger text-center">
-              <i class="nc-icon nc-paper" style="color: #3ab553;"></i>
+              <i class="nc-icon nc-check-2" style="color: #3ab553;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #3ab553; font-weight: bolder">History Surat</h4>
+              <h4 class="info-title" style="color: #3ab553; font-weight: bolder">Berkas Disetujui</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Melihat dan mengelola surat yang pernah dibuat.</p>
+              <p style="font-weight: bolder" id="deskripsi2">Setelah data disetujui maka anda akan dihubungi oleh tim kami melalui email/telepon.</p>
             </div>
           </div>
         </div>
@@ -374,8 +374,9 @@
                   <!-- nik  -->
                   <label style="color: white;">Username</label>
                   <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                   </div>
+                  <div id="huhu"></div>
                   <!-- nik  -->
                 </div>
 
@@ -392,18 +393,21 @@
               <!-- tempat lahir  -->
               <label style="color: white;">Password</label>
               <div class="form-group">
-                <input type="password" name="passwordlama" onkeyup="check()" id="passwordlama" class="form-control" placeholder="Password" required>
+                <input type="password" name="passwordlama" id="passwordlama" class="form-control" placeholder="Password" required>
               </div>
               <!-- end -->
 
               <!-- tanggal lahir  -->
               <label style="color: white;">Confirm Password</label>
               <div class="form-group">
-                <input type="password" name="password" onkeyup="check()" id="confirm" class="form-control" placeholder="Confirm Password" required>
+                <input type="password" name="password" id="confirm" class="form-control" placeholder="Confirm Password" onkeyup="haha();" required>
               </div>
+
+              <p id="haha"></p>
+
               <!-- end -->
               <div class="col">
-                <button type="submit" id="lala" class="btn btn-info btn-round pull-right" name="save">Daftar</button>
+                <button type="submit" id="lala" class="btn btn-success btn-round pull-right" name="save">Daftar</button>
               </div>
             </fieldset>
             <!-- end  -->
@@ -421,13 +425,13 @@
       <nav class="footer-nav">
         <ul>
           <li>
-            <a href="#" target="_blank">SIPS</a>
+            <a href="#" target="_blank">SPSS</a>
           </li>
         </ul>
       </nav>
       <div class="credits ml-auto">
         <span class="copyright">
-          © SIPS team ci
+          © SPSS team ci
         </span>
       </div>
     </div>
@@ -452,22 +456,45 @@ if($alert == "exist"){
   echo "<script>failed_sweet('The file is already exist.');</script>";
 }
 ?>
-
 <script type="text/javascript">
-  $(function () {
-    $("#lala").click(function () {
-      var password = $("#passwordlama").val();
-      var confirmPassword = $("#confirm").val();
-      if (confirmPassword)
-        if (password != confirmPassword) {
-          alert("Password Tidak Sama, harap ulangi");
-          $("#confirm").val('');
-          $("#confirm").focus();
-          return false;
-        }
-        return true;
-      });
+  $(document).ready(function() {
+    $('#username').keyup(function(){
+      var username = $('#username').val();
+
+      $.ajax({
+        url: '<?= site_url('Auth/cek') ?>',
+        type: 'post',
+        data: {
+          'username' : username,
+        },
+        success: function(response){
+
+            $('#huhu').text(response);
+
+      }
+
+
+    });
+
   });
+})
+</script>
+<script type="text/javascript">
+  function haha() {
+    var password = $("#passwordlama").val();
+    var confirmPassword = $("#confirm").val();
+
+    if (password != confirmPassword) {
+
+     document.getElementById("haha").innerHTML = "Password tidak cocok";
+
+   }else {
+    document.getElementById("haha").innerHTML = "Password cocok";
+  }
+}
+
+
+
 </script>
 
 <script>

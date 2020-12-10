@@ -31,7 +31,27 @@ class Auth extends Core
 			}
 		}
 	}
+	public function cek()
+	{
+		$username = strtolower($this->input->post('username'));
+		if (strlen($username) < 7) {
+			$r = "Terlalu pendek";
+		}else {
+			if($this->m_user->getUsername("tb_siswa", $username) == "0") {
+				$r = "Username bisa digunakan";
+			}else {
+				$r = "Username sudah ada";
+			}
+		}
+		// if ($username == $this->m_user->getUsername("tb_siswa", $username)) {
+		// 	$op = "wes";
+		// }else {
+		// 	 $op = "gong";
+		// }
 
+		echo json_encode($r);
+
+	}
 	public function guest_login()
 	{
 		$data = array(
