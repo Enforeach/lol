@@ -182,21 +182,31 @@
                                                         <div class="row">
                                                             <div class="col-md-9">
                                                                 <div class="form-group">
-                                                                    <label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf 1</label>
-                                                                    <div class="">
-                                                                         <textarea type="text" name="isi" id="isi1" class="form-control" onblur="lololo('isi1');" value=""> </textarea>
+                                                                    <div class="col-md-12">
+                                                                        <div class="row">
+                                                                            <div class="col-md-9">
+                                                                                <button type="button" class="btn btn-warning" id="tambaha"><i class="fa fa-plus"></i>Paragraf</button>
+                                                                                <button type="button" class="btn btn-warning" id="tambaha"><i class="fa fa-plus"></i>List</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <label for="" class="control-label mt-3" style="color: gray; font-size: 12px;">Paragraf 1</label>
+                                                                    <div class="row">
+                                                                        <div class="col-md-9">
+                                                                            <textarea type="text" name="isi" id="isi1" class="form-control" onblur="lololo('isi1');" value=""> </textarea>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <button type="button" id="hapusa1" class="btn btn-danger" onclick="pus('hapusa1');"><i class="fa fa-trash"></i></button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-md-3">
+                                                            <!-- <div class="col-md-3">
                                                                 <div class="form-group">
-                                                                    <label for="" class="control-label"> </label>
-                                                                    <div class="mt-1">
-                                                                        <button type="button" class="btn btn-round" id="tambaha"><i class="fa fa-plus"></i></button>
-                                                                    </div>
+                                                                    <button type="button" class="btn btn-danger" id="hapusa"><i class="fa fa-trash"></i></button>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
 
@@ -313,26 +323,39 @@
                 });
             });
         </script>
-       <script type="text/javascript">
-                var line = 1;
-                var isi = [];
+        <script type="text/javascript">
+            var line = 1;
+            var isi = [];
 
-                $('#tambaha').click(function(){
-                    line = line + 1;
-                    var Baris = '<div class="col-md-12">';
-                    Baris += '<div class="row">';
-                    Baris += '<div class="col-md-9">';
-                    Baris += '<div class="form-group">';
-                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf '+line+'</label>';
-                    Baris += '<div class="">';
-                    Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
-                    Baris += '</div>';
-                    Baris += '</div>';
-                    Baris += '</div>';
-                    $('#baris').append(Baris);
+            $('#tambaha').click(function(){
+                line = line + 1;
+                var Baris = '<div class="col-md-12" id="lala">';
+                Baris += '<div class="row">';
+                Baris += '<div class="col-md-9">';
+                Baris += '<div class="form-group">';
+                Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf '+line+'</label>';
+                Baris += '<div class="row">';
+                Baris += '<div class="col-md-9">';
+                Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
+                Baris += '</div>';
+                Baris += '<div class="col-md-3">';
+                Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
+                Baris += '</div>';
+                Baris += '</div>';
+                $('#baris').append(Baris);
+            });
 
-
-                });
+            function pus(haha) {
+                var uwu = $('#'+haha).val();
+                var haha = haha.substr(6,haha.length);
+                if (haha == 1 || haha <= 1) {
+                    alert("Can't remove all row!");
+                }else{
+                        // alert(haha)
+                        $("#lala").remove();
+                        // $('#isi'+haha).val("");
+                    }
+                };
 
                 function lololo(haha) {
                     var uwu = $('#'+haha).val();
