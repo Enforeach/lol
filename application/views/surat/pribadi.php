@@ -69,9 +69,9 @@
                                                             <div class="col-md-9">
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Isi Surat</label><br>
-                                                                    <label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf</label>
+                                                                    <label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf 1</label>
                                                                     <div class="">
-                                                                        <textarea type="text" name="isi" class="form-control" value=""> </textarea>
+                                                                        <textarea type="text" name="isi" id="isi1" class="form-control" onblur="lololo('isi1');" value=""> </textarea>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -157,17 +157,35 @@
                 });
             </script>
             <script type="text/javascript">
+
+            </script>
+            <script type="text/javascript">
+                var line = 1;
+                var isi = [];
+
                 $('#tambaha').click(function(){
+                    line = line + 1;
                     var Baris = '<div class="col-md-12">';
                     Baris += '<div class="row">';
                     Baris += '<div class="col-md-9">';
                     Baris += '<div class="form-group">';
-                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf</label>';
+                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf '+line+'</label>';
                     Baris += '<div class="">';
-                    Baris += '<textarea type="text" name="isi" class="form-control" value=""> </textarea>';
+                    Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
                     Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
                     $('#baris').append(Baris);
+
+
                 });
+
+                function lololo(haha) {
+                    var uwu = $('#'+haha).val();
+                    var haha = haha.substr(3,haha.length);
+                    var haha = haha-1;
+                    isi[haha] = uwu;
+                    console.log(isi)
+                }
+                
             </script>

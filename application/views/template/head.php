@@ -24,21 +24,22 @@
 
   <!-- JS -->
   <script type="text/javascript"> var BASE_URL = "<?php echo base_url();?>"; </script>
-
+  
   <script src="<?= site_url('assets/css/vendors/js/vendor.bundle.addons.js'); ?>"></script>
   <script src="<?= site_url('assets/css/vendors/js/vendor.bundle.base.js'); ?>"></script>
   <script src="<?= site_url('assets/js/off-canvas.js'); ?>"></script>
   <script src="<?= site_url('assets/js/misc.js'); ?>"></script>
-  <script src="<?= site_url('assets/js/template.js'); ?>"></script>
+
   <script src="<?= site_url('assets/js/jquery.dataTables.min.js'); ?>"></script>
+
   <script src="<?= site_url('assets/js/dataTables.bootstrap4.min.js'); ?>"></script>
+
   <script src="<?= site_url('assets/js/select2.min.js'); ?>"></script>
   <script src="<?= site_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
   <script src="<?= site_url('assets/js/scripts.js'); ?>"></script>
 
   <script src="<?= site_url('assets/custom1.js'); ?>"></script>
   <script src="<?= site_url('assets/cus.js'); ?>"></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- endinject -->
