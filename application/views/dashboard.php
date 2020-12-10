@@ -297,7 +297,7 @@ function tgl_indonesia($tanggal){
                       <i class="mdi mdi-account-convert icon-md"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Pribadi</p>
+                      <p class="mb-0 text-right" style="font-size: 15px;">Pribadi</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
                           
@@ -325,10 +325,10 @@ function tgl_indonesia($tanggal){
                       <i class="mdi mdi-chart-pie icon-md"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Niaga</p>
+                      <p class="mb-0 text-right" style="font-size: 15px;">Niaga</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
-                          1 Data
+                          
                         </p>
                       </div>
                     </div>
@@ -347,10 +347,10 @@ function tgl_indonesia($tanggal){
                       <i class="mdi mdi-account-circle icon-md"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Dinas</p>
+                      <p class="mb-0 text-right" style="font-size: 15px;">Dinas</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
-                          1 Data
+                          
                         </p>
                       </div>
                     </div>

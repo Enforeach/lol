@@ -32,7 +32,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic">
-					<img src="<?=base_url()?>assets/login_assets/images/img-01.png">
+					<img src="<?=base_url()?>assets/login_assets/images/lala.png">
 				</div>
 
 				<form class="login100-form validate-form" method="post">

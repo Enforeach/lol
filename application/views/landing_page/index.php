@@ -298,11 +298,11 @@
           <h5 id="text2">Daftarkan diri anda untuk menjadi bagian dari kami.</h5>
           <h5 id="text3">Silahkan lanjutkan dengan mengklik tombol ini.</h5>
           <br>
-          <button type="button" id="btn-daftar" href="#regis" class="btn btn-primary scroll btn-round mb-5 textq">Registrasi</button>
+          <button type="button" id="btn-daftar" href="#regis" class="btn btn-info scroll btn-round mb-5 textq">Registrasi</button>
         </div>
       </div>
     </div>
-    <h6 class="category category-absolute" id="dsosia" style="color: gray;">Registrasi SIPS
+    <h6 class="category category-absolute" id="dsosia" style="color: #1b7fd9;">Registrasi SIPS
     </h6>
   </div>
   <!-- end header  -->
@@ -311,7 +311,7 @@
   <div class="container" id="alur">
     <div class="row">
       <div class="col-md-12 mt-5 text-center">
-        <h2 class="title text-center" id="alr1">SISTEM PEMBERANTASAN SURAT SETAN</h2>
+        <h2 class="title text-center" id="alr1">SISTEM PEMBERANTASAN SURAT</h2>
       </div>
     </div>
     <div class="jumbotron" style="background-color: transparent !important; margin-top: -5%; background-position-x: 100px;">
@@ -322,9 +322,9 @@
               <i class="nc-icon nc-single-copy-04" style="color: #53bedb;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #53bedb; font-weight: bolder">Daftar Online</h4>
+              <h4 class="info-title" style="color: #53bedb; font-weight: bolder">Registrasi</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Daftar online melalui website ini dengan mengisi data yang diperlukan. <a href="#regis" class="scroll" style="color: #53bedb">form pendaftaran di bawah ini.</a>
+              <p style="font-weight: bolder" id="deskripsi2">Registrasi melalui website ini dengan mengisi data yang diperlukan. <a href="#regis" class="scroll" style="color: #53bedb">form pendaftaran di bawah ini.</a>
               </p>
             </div>
           </div>
@@ -332,24 +332,24 @@
         <div class="col-md-4" id="alur-txt1">
           <div class="info">
             <div class="icon icon-danger text-center">
-              <i class="nc-icon nc-watch-time" style="color: #e0d324;"></i>
+              <i class="nc-icon nc-email-85" style="color: #e0d324;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #e0d324; font-weight: bolder">Pemeriksaan Data</h4>
+              <h4 class="info-title" style="color: #e0d324; font-weight: bolder">Surat</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Data akan diperiksa oleh tim kami pastikan data yang diisi benar dan dapat dipertanggung jawabkan.</p>
+              <p style="font-weight: bolder" id="deskripsi2">Website ini dapat membuat surat Pribadi, Dinas, & Niaga lebih efektif.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4" id="alur-txt2">
           <div class="info">
             <div class="icon icon-danger text-center">
-              <i class="nc-icon nc-check-2" style="color: #3ab553;"></i>
+              <i class="nc-icon nc-paper" style="color: #3ab553;"></i>
             </div>
             <div class="description text-center" id="deskripsi">
-              <h4 class="info-title" style="color: #3ab553; font-weight: bolder">Berkas Disetujui</h4>
+              <h4 class="info-title" style="color: #3ab553; font-weight: bolder">History Surat</h4>
               <br>
-              <p style="font-weight: bolder" id="deskripsi2">Setelah data disetujui maka anda akan dihubungi oleh tim kami melalui email/telepon.</p>
+              <p style="font-weight: bolder" id="deskripsi2">Melihat dan mengelola surat yang pernah dibuat.</p>
             </div>
           </div>
         </div>
@@ -392,18 +392,18 @@
               <!-- tempat lahir  -->
               <label style="color: white;">Password</label>
               <div class="form-group">
-                <input type="password" name="passwordlama" id="passwordlama" class="form-control" placeholder="Password" required>
+                <input type="password" name="passwordlama" onkeyup="check()" id="passwordlama" class="form-control" placeholder="Password" required>
               </div>
               <!-- end -->
 
               <!-- tanggal lahir  -->
               <label style="color: white;">Confirm Password</label>
               <div class="form-group">
-                <input type="password" name="password" id="confirm" class="form-control" placeholder="Confirm Password" required>
+                <input type="password" name="password" onkeyup="check()" id="confirm" class="form-control" placeholder="Confirm Password" required>
               </div>
               <!-- end -->
               <div class="col">
-                <button type="submit" id="lala" class="btn btn-success btn-round pull-right" name="save">Daftar</button>
+                <button type="submit" id="lala" class="btn btn-info btn-round pull-right" name="save">Daftar</button>
               </div>
             </fieldset>
             <!-- end  -->

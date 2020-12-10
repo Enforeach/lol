@@ -8,12 +8,12 @@
                         <div class="profile-img" data-toggle="tooltip" data-placement="top" title="Klik Ganti Poto">
                             <img id="profileImage" src="<?= site_url('images/icon_user.png'); ?>" alt="" style="border: 3px solid #308ee0"/>
                             <div class="file">
-                                <input id="imageUpload" type="file" name="foto" placeholder="Photo" capture="filesystem" accept="image/png,image/jpeg">
+                                <!-- <input id="imageUpload" type="file" name="foto" placeholder="Photo" capture="filesystem" accept="image/png,image/jpeg"> -->
                             </div>
                         </div>
                         <div id="pcc-btn">
-                            <button type="submit" class="btn btn-primary btn-rounded" name="save">Simpan Foto</button>
-                            <p style="font-size: 10px" class="mt-2">klik profile untuk mengganti foto</p>
+                            <label type="text" class="btn btn-primary btn-rounded"><?= $username ?></label>
+                            <p style="font-size: 10px" class="mt-4"> </p>
                             <a data-toggle="modal" data-target="#exampleModalCenter" style="color: #308ee0; cursor: pointer;"><h6>lihat foto</h6></a>
                         </div>
                         <!-- modal gambar -->

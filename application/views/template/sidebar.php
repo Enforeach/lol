@@ -27,7 +27,7 @@
         <div class="nav-link">
           <div class="user-wrapper">
             <div>
-              <a href="<?= site_url('images/icon_user.png'); ?>">
+              <a href="<?= site_url('Profile') ?>">
                         <img id ="gambarmu"
                         style="   width: 40px;
                         height: 40px;
