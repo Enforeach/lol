@@ -66,17 +66,29 @@
 
                                                     <div class="col-md-12">
                                                         <div class="row">
-                                                            <div class="col-md-12">
+                                                            <div class="col-md-9">
                                                                 <div class="form-group">
-                                                                    <label for="" class="control-label">Isi Kalimat</label>
+                                                                    <label for="" class="control-label">Isi Surat</label><br>
+                                                                    <label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf</label>
                                                                     <div class="">
-                                                                        <div id="editor">
-                                                                            <p name="isi"></p>
-                                                                        </div>
+                                                                        <textarea type="text" name="isi" class="form-control" value=""> </textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="" class="control-label"> </label>
+                                                                    <div class="mt-4">
+                                                                        <button type="button" class="btn btn-round" id="tambaha"><i class="fa fa-plus"></i></button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+
+                                                    <div id="baris">
+
                                                     </div>
 
                                                     <div class="col-md-12">
@@ -144,13 +156,18 @@
                     });
                 });
             </script>
-            <script>
-                ClassicEditor
-                .create( document.querySelector( '#editor' ) )
-                .then( editor => {
-                    console.log( editor );
-                } )
-                .catch( error => {
-                    console.error( error );
-                } );
+            <script type="text/javascript">
+                $('#tambaha').click(function(){
+                    var Baris = '<div class="col-md-12">';
+                    Baris += '<div class="row">';
+                    Baris += '<div class="col-md-9">';
+                    Baris += '<div class="form-group">';
+                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf</label>';
+                    Baris += '<div class="">';
+                    Baris += '<textarea type="text" name="isi" class="form-control" value=""> </textarea>';
+                    Baris += '</div>';
+                    Baris += '</div>';
+                    Baris += '</div>';
+                    $('#baris').append(Baris);
+                });
             </script>

@@ -43,11 +43,6 @@ class Auth extends Core
 				$r = "Username sudah ada";
 			}
 		}
-		// if ($username == $this->m_user->getUsername("tb_siswa", $username)) {
-		// 	$op = "wes";
-		// }else {
-		// 	 $op = "gong";
-		// }
 
 		echo json_encode($r);
 

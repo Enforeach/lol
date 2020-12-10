@@ -376,7 +376,7 @@
                   <div class="form-group">
                     <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                   </div>
-                  <div id="huhu"></div>
+                  <b><div id="huhu"></div></b>
                   <!-- nik  -->
                 </div>
 
@@ -403,7 +403,7 @@
                 <input type="password" name="password" id="confirm" class="form-control" placeholder="Confirm Password" onkeyup="haha();" required>
               </div>
 
-              <p id="haha"></p>
+              <b><p id="haha"></p></b>
 
               <!-- end -->
               <div class="col">
@@ -468,16 +468,16 @@ if($alert == "exist"){
           'username' : username,
         },
         success: function(response){
+          $lala = response.substring(1,response.length - 1);
+          $('#huhu').css("color", "yellow");
+          $('#huhu').text($lala);
+        }
 
-            $('#huhu').text(response);
 
-      }
-
+      });
 
     });
-
-  });
-})
+  })
 </script>
 <script type="text/javascript">
   function haha() {
@@ -485,13 +485,14 @@ if($alert == "exist"){
     var confirmPassword = $("#confirm").val();
 
     if (password != confirmPassword) {
-
+      $('#haha').css("color", "yellow");
      document.getElementById("haha").innerHTML = "Password tidak cocok";
 
    }else {
-    document.getElementById("haha").innerHTML = "Password cocok";
-  }
-}
+     $('#haha').css("color", "#03e668");
+     document.getElementById("haha").innerHTML = "Password cocok";
+   }
+ }
 
 
 
