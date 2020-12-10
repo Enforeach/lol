@@ -29,6 +29,11 @@ class M_user extends CI_Model
     $q = $this->db->get()->row();
     return $q->total;
   }
+    public function add_surata($table, $data)
+  {
+    $this->db->insert($table, $data);
+  }
+
   public function set($id)
   {
     $this->db->select("*");

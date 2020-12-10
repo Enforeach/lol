@@ -82,9 +82,7 @@
                                                                         <div class="col-md-9">
                                                                             <textarea type="text" name="isi" id="isi1" class="form-control" onblur="lololo('isi1');" value=""> </textarea>
                                                                         </div>
-                                                                        <div class="col-md-3">
-                                                                            <button type="button" id="hapusa1" class="btn btn-danger" onclick="pus('hapusa1');"><i class="fa fa-trash"></i></button>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -129,7 +127,7 @@
 
                                                     <div class="col-md-12 mt-5">
                                                         <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
-                                                        <button type="submit" name="save" class="btn btn-primary pull-right"><?= $submit ?></button>
+                                                        <button type="submit" name="save" id="save" class="btn btn-primary pull-right"><?= $submit ?></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -174,8 +172,10 @@
                 var isi = [];
 
                 $('#tambaha').click(function(){
+
+                    $("#trash"+line).remove();
                     line = line + 1;
-                    var Baris = '<div class="col-md-12" id="lala">';
+                    var Baris = '<div class="col-md-12" id="lala'+line+'">';
                     Baris += '<div class="row">';
                     Baris += '<div class="col-md-9">';
                     Baris += '<div class="form-group">';
@@ -184,8 +184,10 @@
                     Baris += '<div class="col-md-9">';
                     Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
                     Baris += '</div>';
-                    Baris += '<div class="col-md-3">';
+                    Baris += '<div class="col-md-3" id="place'+line+'">';
+                    Baris += '<div id="trash'+line+'">';
                     Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
+                    Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
                     $('#baris').append(Baris);
@@ -198,8 +200,16 @@
                         alert("Can't remove all row!");
                     }else{
                         // alert(haha)
-                        $("#lala").remove();
-                        // $('#isi'+haha).val("");
+                        $("#lala"+line).remove();
+                        line = line-1;
+                        var aku = '<div id="trash'+line+'">';
+                        aku += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
+                        aku += '</div>';
+
+                        $('#place'+line).append(aku);
+                        $('#isi'+haha).val("");
+                        isi.splice(line,1);
+                        console.log(isi)
                     }
                 };
 
@@ -211,4 +221,28 @@
                     console.log(isi)
                 };
 
+                $('#save').click(function(event){
+                    event.preventDefault();
+                    var tempat = $("input[name='tempat']").val()
+                    var tanggal = $("input[name='tanggal']").val()
+                    var salam_pembuka = $("input[name='salam_pembuka']").val()
+                    var salam_penutup = $("input[name='salam_penutup']").val()
+                    var nama = $("input[name='nama']").val()
+
+                    $.ajax({
+                      type:'POST',
+                      data:'tempat='+tempat+'&tanggal='+tanggal+'&salam_pembuka='+salam_pembuka+'&salam_penutup='+salam_penutup+'&nama='+nama+'&isi='+JSON.stringify(isi),
+                      url:'<?= site_url('Create/add_surat_pribadi') ?>',
+                      dataType:'JSON',
+                      success: function(hasil){
+                        if (hasil == '') {
+
+                          success_sweet('Data berhasil ditambahkan.','Create/pribadi');
+                          
+                      }else{
+                          swal("Tidak Bisa", "Wilayah sudah digunakan !", "warning");
+                      }
+                  }
+              });
+                });
             </script>
