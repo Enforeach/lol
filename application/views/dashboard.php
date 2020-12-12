@@ -136,7 +136,7 @@ function tgl_indonesia($tanggal){
             <!-- awal  -->
             <div class="col-md-6 grid-margin stretch-card mt-2">
               <div class="card card-statistics cardku">
-                <a href="#" class="hilih" style="text-decoration:none; color: black">
+                <a href="<?= site_url('Side/history') ?>" class="hilih" style="text-decoration:none; color: black">
                   <div class="card-body" style="background-color: #f2f2f2; color: grey !important">
                     <div class="clearfix">
                       <div class="float-left">

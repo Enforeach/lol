@@ -12,7 +12,7 @@
                             </div>
                         </div>
                         <div id="pcc-btn">
-                            <label type="text" class="btn btn-primary btn-rounded"><?= $username ?></label>
+                            <label type="text" class="btn btn-primary btn-rounded"><?= $nama_lengkap ?></label>
                             <p style="font-size: 10px" class="mt-4"> </p>
                             <a data-toggle="modal" data-target="#exampleModalCenter" style="color: #308ee0; cursor: pointer;"><h6>lihat foto</h6></a>
                         </div>
@@ -53,7 +53,7 @@
                                 <b><?= $nama_lengkap ?></b>
                                 </h3>
                                 <h6>
-                                <?= $username ?>
+                                @<?= $username ?>
                                 </h6>
                                 <br>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">

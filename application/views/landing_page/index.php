@@ -311,7 +311,7 @@
   <div class="container" id="alur">
     <div class="row">
       <div class="col-md-12 mt-5 text-center">
-        <h2 class="title text-center" id="alr1">SISTEM PEMBERANTASAN SURAT SETAN</h2>
+        <h2 class="title text-center" id="alr1">SISTEM PENGELOLAAN SURAT</h2>
       </div>
     </div>
     <div class="jumbotron" style="background-color: transparent !important; margin-top: -5%; background-position-x: 100px;">

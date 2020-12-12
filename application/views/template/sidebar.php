@@ -40,7 +40,7 @@
             <div class="text-wrapper">
               <p class="profile-name" ><?= $nama_lengkap ?></p>
               <div>
-                <small class="designation text-muted" style="text-transform: uppercase;letter-spacing: 1px;"><?= $username ?></small>
+                <small class="designation text-muted" style="text-transform: uppercase;letter-spacing: 1px;">@<?= $username ?></small>
                 <span class="status-indicator online"></span>
               </div>
             </div>
@@ -56,9 +56,9 @@
       </li>
 
       <li class="nav-item"> 
-        <a class="nav-link" href="<?= site_url('User') ?>">
-          <i class="menu-icon mdi mdi-account-multiple-plus"></i>
-          <span class="menu-title">User</span>
+        <a class="nav-link" href="<?= site_url('Side/History') ?>">
+          <i class="menu-icon mdi mdi-account-convert icon-md"></i>
+          <span class="menu-title">History</span>
 
           <span class="badge" style="
           background: red; border-radius: 30px; color: #fff; font-size: 10px;
@@ -69,19 +69,13 @@
       </li>
 
       <li class="nav-item"> 
-        <a class="nav-link" href="<?= site_url('Biodata') ?>">
+        <a class="nav-link" href="<?= site_url('Side/Biodata') ?>">
           <i class="menu-icon mdi mdi-message-text-outline"></i>
           <span class="menu-title">Biodata</span>
         </a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="<?= site_url('Pengembang') ?>">
-          <i class="menu-icon mdi mdi-comment-account-outline"></i>
-          <span class="menu-title">Pengembang</span>
-        </a>
-      </li>
-      <li class="nav-item"> 
-        <a class="nav-link" href="<?= site_url('Rujukan') ?>">
+        <a class="nav-link" href="<?= site_url('Side/Rujukan') ?>">
           <i class="menu-icon mdi mdi-debug-step-over"></i>
           <span class="menu-title">Rujukan</span>
         </a>
