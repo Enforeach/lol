@@ -17,6 +17,14 @@ class Create extends Core {
 		}
 		$this->renderpage('surat/pribadi');
 	}
+	public function cetak_Pribadi()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->load->view('surat/cetak_Pribadi');
+	}
 
 	public function Dinas()
 	{
@@ -47,6 +55,8 @@ class Create extends Core {
 		$isi    = $_POST["isi"];
 		$isi    = json_decode("$isi", true);
 
+		$jenis_isi    = $_POST["jenis_isi"];
+		$jenis_isi    = json_decode("$jenis_isi", true);
 		$data = array(
 			'tempat' => $tempat,
 			'nama' => $nama,
@@ -65,7 +75,7 @@ class Create extends Core {
 			$data1 = array(
 				'id_isi' => $id_isi,
 				'isi' => $isi[$i],
-				'jenis' => 'paragraf',
+				'jenis' => $jenis_isi[$i],
 			);
 			$this->m_surat->add_surata('tb_isi', $data1);
 		}

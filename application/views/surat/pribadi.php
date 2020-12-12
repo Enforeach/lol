@@ -127,7 +127,7 @@
 
                                                     <div class="col-md-12 mt-5">
                                                         <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
-                                                        <button type="submit" name="save" id="save" class="btn btn-primary pull-right"><?= $submit ?></button>
+                                                        <a href="<?= site_url('Create/cetak_Pribadi') ?>" name="save" id="save" class="btn btn-primary pull-right"><?= $submit ?></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -169,17 +169,22 @@
             </script>
             <script type="text/javascript">
                 var line = 1;
+                var par = 1;
                 var isi = [];
-
+                var jenis_isi = ['par'];
+                var list = 0;
                 $('#tambaha').click(function(){
 
+                        jenis_isi.push('par');
                     $("#trash"+line).remove();
+                    list = 0;
                     line = line + 1;
+                    par = par + 1;
                     var Baris = '<div class="col-md-12" id="lala'+line+'">';
                     Baris += '<div class="row">';
                     Baris += '<div class="col-md-9">';
                     Baris += '<div class="form-group">';
-                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf '+line+'</label>';
+                    Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf '+par+'</label>';
                     Baris += '<div class="row">';
                     Baris += '<div class="col-md-9">';
                     Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
@@ -187,16 +192,21 @@
                     Baris += '<div class="col-md-3" id="place'+line+'">';
                     Baris += '<div id="trash'+line+'">';
                     Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
+                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="para">';
                     Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
                     $('#baris').append(Baris);
+                    console.log(jenis_isi)
                 });
 
-                var list = 0;
+
                 $('#tambahlist').click(function(){
+
+                        jenis_isi.push('li');
                     $("#trash"+line).remove();
                     list = list + 1;
+                    line = line + 1;
                     var Baris = '<div class="col-md-12" id="lala'+line+'">';
                     Baris += '<div class="row">';
                     Baris += '<div class="col-md-9">';
@@ -212,10 +222,12 @@
                     Baris += '<div class="col-md-3" id="place'+line+'">';
                     Baris += '<div id="trash'+line+'">';
                     Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
+                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="list">';
                     Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
                     $('#baris').append(Baris);
+                    console.log(jenis_isi)
                 });
 
                 function pus(haha) {
@@ -225,6 +237,9 @@
                         alert("Can't remove all row!");
                     }else{
                         // alert(haha)
+                        if ($("#pantau"+line).val() == "para") {
+                            par = par-1;
+                        }
                         $("#lala"+line).remove();
                         line = line-1;
                         var aku = '<div id="trash'+line+'">';
@@ -234,7 +249,9 @@
                         $('#place'+line).append(aku);
                         $('#isi'+haha).val("");
                         isi.splice(line,1);
+                        jenis_isi.splice(line,1);
                         console.log(isi)
+                        console.log(jenis_isi)
                     }
                 };
 
@@ -246,8 +263,7 @@
                     console.log(isi)
                 };
 
-                $('#save').click(function(event){
-                    event.preventDefault();
+                $('#save').click(function(){
                     var tempat = $("input[name='tempat']").val()
                     var tanggal = $("input[name='tanggal']").val()
                     var salam_pembuka = $("input[name='salam_pembuka']").val()
@@ -256,7 +272,7 @@
 
                     $.ajax({
                       type:'POST',
-                      data:'tempat='+tempat+'&tanggal='+tanggal+'&salam_pembuka='+salam_pembuka+'&salam_penutup='+salam_penutup+'&nama='+nama+'&isi='+JSON.stringify(isi),
+                      data:'tempat='+tempat+'&tanggal='+tanggal+'&salam_pembuka='+salam_pembuka+'&salam_penutup='+salam_penutup+'&nama='+nama+'&isi='+JSON.stringify(isi)+'&jenis_isi='+JSON.stringify(jenis_isi),
                       url:'<?= site_url('Create/add_surat_pribadi') ?>',
                       dataType:'JSON',
                       success: function(hasil){
