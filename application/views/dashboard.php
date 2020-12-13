@@ -300,7 +300,7 @@ function tgl_indonesia($tanggal){
                       <p class="mb-0 text-right" style="font-size: 15px;">Pribadi</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
-                          
+
                         </p>
                       </div>
                     </div>
@@ -328,7 +328,7 @@ function tgl_indonesia($tanggal){
                       <p class="mb-0 text-right" style="font-size: 15px;">Niaga</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
-                          
+
                         </p>
                       </div>
                     </div>
@@ -340,7 +340,7 @@ function tgl_indonesia($tanggal){
 
           <div class="col-md-6 grid-margin stretch-card mt-2">
             <div class="card card-statistics cardku">
-              <a href="<?= site_url('Create/Dinas') ?>" class="hilih" style="text-decoration:none; color: black">
+              <a data-toggle="modal" data-target="#tambah-wil" href="#" class="hilih" style="text-decoration:none; color: black">
                 <div class="card-body" style="background-color: #f2f2f2; color: grey !important">
                   <div class="clearfix">
                     <div class="float-left">
@@ -350,7 +350,7 @@ function tgl_indonesia($tanggal){
                       <p class="mb-0 text-right" style="font-size: 15px;">Dinas</p>
                       <div class="fluid-container">
                         <p class="font-weight-medium text-right mb-0">
-                          
+
                         </p>
                       </div>
                     </div>
@@ -368,4 +368,70 @@ function tgl_indonesia($tanggal){
 
 </div>
 
+<!-- Modal Tambah -->
+<div class="modal fade" id="tambah-wil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: white; border-radius: 0px">
+      <div class="modal-header">
+       <!-- id="exampleModalLongTitle -->
+       <h5 class="modal-title">Pilih Layout</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="col-12 row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div>
+                <img id="profileImage" src="" alt="" style="width: 100%;"/>
+                <center><b><u><p id="haha"> </p></u></b></center>
+                <center><a href="<?= site_url('Create') ?>" id="lala" class="btn btn-warning">Buat</a></center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <center style="margin-right: 19px;">
+        <button id="btn-Indented" onclick="pop('Indented')" class="btn btn-primary">Indented</button>
+        <button id="btn-Hanging" onclick="pop('Hanging')" class="btn btn-primary">Hanging</button>
+        <button id="btn-Block" onclick="pop('Block')" class="btn btn-primary">Block</button>
+        <button id="btn-Semi_Block" onclick="pop('Semi_Block')" class="btn btn-primary">Semi Block</button>
+        <div style="margin-top: 10px;"></div>
+        <button id="btn-Full_Block" onclick="pop('Full_Block')" class="btn btn-primary">Full Block</button>
+      </center>
+    </div>
+  </div>
 </div>
+</div>
+<!-- end modal tambah  -->
+
+</div>
+
+<script type="text/javascript">
+  function pop(x) {
+    if (x == 'Indented') {
+      document.getElementById("profileImage").src = "<?= site_url('images/Style/Indented.jpg'); ?>";
+      document.getElementById("haha").innerHTML = x+" Style";
+    }
+    if (x == 'Hanging') {
+      document.getElementById("profileImage").src = "<?= site_url('images/Style/Hanging.jpg'); ?>";
+      document.getElementById("haha").innerHTML = x+" Style";
+    }
+    if (x == 'Block') {
+      document.getElementById("profileImage").src = "<?= site_url('images/Style/Block.jpg'); ?>";
+      document.getElementById("haha").innerHTML = x+" Style";
+    }
+    if (x == 'Semi_Block') {
+      document.getElementById("profileImage").src = "<?= site_url('images/Style/Semi_Block.jpg'); ?>";
+      document.getElementById("haha").innerHTML = "Semi Block Style";
+    }
+    if (x == 'Full_Block') {
+      document.getElementById("profileImage").src = "<?= site_url('images/Style/Full_Block.jpg'); ?>";
+      document.getElementById("haha").innerHTML = "Full Block Style";
+    }
+  }
+</script>

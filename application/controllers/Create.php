@@ -17,13 +17,60 @@ class Create extends Core {
 		}
 		$this->renderpage('surat/pribadi');
 	}
+
+	public function cetak_Indented()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('surat/cetak_indented');
+	}
+
+	public function cetak_Hanging()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('surat/cetak_hanging');
+	}
+
+	public function cetak_Fullblock()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('surat/cetak_full_block');
+	}
+
+	public function cetak_Block()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('surat/cetak_block');
+	}
+
+	public function cetak_Semiblock()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('surat/cetak_semiblock');
+	}
+
+
 	public function cetak_Pribadi()
 	{
 		if(!$this->isLogin){
 			redirect('Auth');
 			die();
 		}
-		$this->load->view('surat/cetak_Pribadi');
+		$this->load->view('surat/cetak_pribadi');
 	}
 
 	public function Dinas()

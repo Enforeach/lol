@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    SPSS - Pendaftaran Online
+    SIPS - Pendaftaran Online
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
   name='viewport' />
@@ -257,7 +257,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand scroll" href="#bgne" rel="tooltip" style="color: rgb(77, 77, 77) !important" data-placement="bottom">
-          SPSS
+          SIPS
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" style="color: black">
@@ -293,7 +293,7 @@
           <!-- <img src="assets/lpage/img/pro.png" id="imgne" style="width: 114%; margin-top: -4%"> -->
         </div>
         <div class="col-xl-6 order-xl-first">
-          <h1 id="text1">Hai, Kami dari SPSS</h1>
+          <h1 id="text1">Hai, Kami dari SIPS</h1>
           <br>
           <h5 id="text2">Daftarkan diri anda untuk menjadi bagian dari kami.</h5>
           <h5 id="text3">Silahkan lanjutkan dengan mengklik tombol ini.</h5>
@@ -302,7 +302,7 @@
         </div>
       </div>
     </div>
-    <h6 class="category category-absolute" id="dsosia" style="color: gray;">Registrasi SPSS
+    <h6 class="category category-absolute" id="dsosia" style="color: gray;">Registrasi SIPS
     </h6>
   </div>
   <!-- end header  -->
