@@ -34,7 +34,7 @@
                         border-radius: 50%;
                         object-fit: cover;
                         border: 0.1px solid gray"
-                        src="<?= site_url('images/icon_user.png'); ?>" alt="">
+                        src="<?= site_url('images/icon_user2.png'); ?>" alt="">
                 </a>
             </div>
             <div class="text-wrapper">

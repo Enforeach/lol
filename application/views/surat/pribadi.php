@@ -28,7 +28,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Tempat</label>
                                                                     <div>
-                                                                        <input type="text" name="tempat" class="form-control" value="" placeholder="contoh: Malang">
+                                                                        <input type="text" name="tempat" class="form-control" value="" placeholder="contoh: Malang" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -39,12 +39,33 @@
                                                                     <div class="input-group date">
                                                                         <input type="text" id="basicDate" name="tanggal" value="" class="form-control"
                                                                         placeholder="Tanggal" style="height: 34.5px" required>
-                                                                        <div class="input-group-append"  style="height: 34.5px">
+                                                                        <div class="input-group-append" style="height: 34.5px">
                                                                             <span class="input-group-text">
                                                                                 <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i>
                                                                                 </span>
                                                                             </span>
                                                                         </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="control-label">Nama Tujuan</label>
+                                                                    <div class="">
+                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="control-label">Kota Tujuan</label>
+                                                                    <div class="">
+                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -127,7 +148,8 @@
 
                                                     <div class="col-md-12 mt-5">
                                                         <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
-                                                        <a href="<?= site_url('Create/cetak_Pribadi') ?>" name="save" id="save" class="btn btn-primary pull-right"><?= $submit ?></a>
+                                                        <button style="margin-left: 10px;" name="save" id="save" class="btn btn-primary pull-right">Simpan</button>
+                                                        <button name="savec" id="savec" class="btn btn-primary pull-right">Simpan & Cetak</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,20 +160,6 @@
                             </div>
                         </form>
                     </div>
-                    <?php
-                    if($alert == "success"){
-                        echo "<script>success_sweet('Data is saved.','addSuratPribadi');</script>";
-                    }
-                    if($alert == "exist"){
-                        echo "<script>failed_sweet('The file is already exist.');</script>";
-                    }
-                    if($alert == "success_edit"){
-                        echo "<script>success_sweet('Data is updated.','Dashboard');</script>";
-                    }
-                    if($alert == "too large"){
-                        echo "<script>failed_sweet('The file you are trying to upload is too large.');</script>";
-                    }
-                    ?>
 
                 </div>
                 <!-- akhir content -->
@@ -175,7 +183,7 @@
                 var list = 0;
                 $('#tambaha').click(function(){
 
-                        jenis_isi.push('par');
+                    jenis_isi.push('par');
                     $("#trash"+line).remove();
                     list = 0;
                     line = line + 1;
@@ -189,10 +197,11 @@
                     Baris += '<div class="col-md-9">';
                     Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
                     Baris += '</div>';
+
+                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="para">';
                     Baris += '<div class="col-md-3" id="place'+line+'">';
                     Baris += '<div id="trash'+line+'">';
                     Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
-                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="para">';
                     Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
@@ -203,7 +212,7 @@
 
                 $('#tambahlist').click(function(){
 
-                        jenis_isi.push('li');
+                    jenis_isi.push('li');
                     $("#trash"+line).remove();
                     list = list + 1;
                     line = line + 1;
@@ -219,10 +228,11 @@
                     Baris += '<div class="col-md-8">';
                     Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
                     Baris += '</div>';
+
+                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="li">';
                     Baris += '<div class="col-md-3" id="place'+line+'">';
                     Baris += '<div id="trash'+line+'">';
                     Baris += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
-                    Baris += '<input type="hidden" id="pantau'+line+'" class="form-control" value="list">';
                     Baris += '</div>';
                     Baris += '</div>';
                     Baris += '</div>';
@@ -236,11 +246,10 @@
                     if (haha == 1 || haha <= 1) {
                         alert("Can't remove all row!");
                     }else{
-                        // alert(haha)
                         if ($("#pantau"+line).val() == "para") {
                             par = par-1;
-                        }
-                        $("#lala"+line).remove();
+                        }                       
+                         $("#lala"+line).remove();
                         line = line-1;
                         var aku = '<div id="trash'+line+'">';
                         aku += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';
@@ -263,7 +272,8 @@
                     console.log(isi)
                 };
 
-                $('#save').click(function(){
+                $('#save').click(function(e){
+                    e.preventDefault()
                     var tempat = $("input[name='tempat']").val()
                     var tanggal = $("input[name='tanggal']").val()
                     var salam_pembuka = $("input[name='salam_pembuka']").val()
@@ -276,14 +286,32 @@
                       url:'<?= site_url('Create/add_surat_pribadi') ?>',
                       dataType:'JSON',
                       success: function(hasil){
-                        if (hasil == '') {
 
-                          success_sweet('Data berhasil ditambahkan.','Create/pribadi');
-                          
-                      }else{
-                          swal("Tidak Bisa", "Wilayah sudah digunakan !", "warning");
-                      }
-                  }
-              });
+                        success_sweet('Surat berhasil disimpan.','<?= site_url("Home") ?>');
+
+                    }
+                });
+                });
+                $('#savec').click(function(e){
+                    e.preventDefault()
+                    var tempat = $("input[name='tempat']").val()
+                    var tanggal = $("input[name='tanggal']").val()
+                    var nama_tujuan = $("input[name='nama_tujuan']").val()
+                    var kota_tujuan = $("input[name='kota_tujuan']").val()
+                    var salam_pembuka = $("input[name='salam_pembuka']").val()
+                    var salam_penutup = $("input[name='salam_penutup']").val()
+                    var nama = $("input[name='nama']").val()
+
+                    $.ajax({
+                      type:'POST',
+                      data:'tempat='+tempat+'&tanggal='+tanggal+'&nama_tujuan='+nama_tujuan+'&kota_tujuan='+kota_tujuan+'&salam_pembuka='+salam_pembuka+'&salam_penutup='+salam_penutup+'&nama='+nama+'&isi='+JSON.stringify(isi)+'&jenis_isi='+JSON.stringify(jenis_isi),
+                      url:'<?= site_url('Create/add_surat_pribadi') ?>',
+                      dataType:'JSON',
+                      success: function(hasil){
+
+                        success_sweet('Surat berhasil disimpan.','cetak_Pribadi/'+hasil);
+
+                    }
+                });
                 });
             </script>

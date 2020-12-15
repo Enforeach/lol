@@ -17,9 +17,29 @@ class M_surat extends CI_Model
     $q = $this->db->get()->row();
     return $q->total;  
   }
+    public function getMax() {
+    $this->db->select_max("id_detail");
+    $this->db->from("tb_detail_surat");
+    $q = $this->db->get()->row();
+    return $q->id_detail;  
+  }
   public function add_surata($table, $data)
   {
     $this->db->insert($table, $data);
+  }
+  public function getSurat($nama_singkat)
+  {
+    $this->db->select("*");
+    $this->db->from("tb_detail_surat");
+    $this->db->where("id_detail", $nama_singkat);
+    return $this->db->get()->row();
+  }
+    public function getAll($id)
+  {
+    $this->db->select("*");
+    $this->db->from('tb_isi');
+    $this->db->where("id_isi", $id);
+    return $this->db->get()->result();
   }
 
 }

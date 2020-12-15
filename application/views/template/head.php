@@ -43,7 +43,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- endinject -->
-  <link rel="shortcut icon" href="<?= site_url('assets/images/logo.jpeg'); ?>" />
+  <link rel="shortcut icon" href="<?= site_url('./images/logo.png'); ?>" />
 
   <!-- profil css  -->
   <style>
@@ -351,6 +351,7 @@
           color: #0062cc;
           padding-top: 2%;
       }
+      
   </style>
 
 </head>

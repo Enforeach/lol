@@ -2,6 +2,13 @@
 $content = "
 <html> 
 <body>
+<div style='position: absolute;'>
+<img id='profileImage' width='80' height='80' src='".site_url('images/logo.png')."'
+                                                          style='border: 1px solid gray;
+                                                          margin-left: 100px;
+                                                          margin-right: auto;
+                                                          border-radius: 50%;'/>
+                                                          </div>
 <p style='text-align: center; font-size:17px;'>PT. LALALA LILILI</p>
 <p style='text-align: center; line-height: 1px;padding-top: -10px'>Jl. Nusantara No. 189</p>
 <p style='text-align: center; line-height: 1px;padding-top: -3px'>Telp (021)674853 Fax. (021). 654321</p>

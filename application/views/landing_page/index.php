@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="<?= site_url('assets/images/'); ?>" />
+  <link rel="shortcut icon" href="<?= site_url('images/logo.png'); ?>" />
   <link rel="icon" type="image/png" href="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -257,7 +257,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand scroll" href="#bgne" rel="tooltip" style="color: rgb(77, 77, 77) !important" data-placement="bottom">
-          SIPS
+          <b style="font-size: 20px;">SIPS</b>
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" style="color: black">
@@ -290,7 +290,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-6 order-xl-last">
-          <!-- <img src="assets/lpage/img/pro.png" id="imgne" style="width: 114%; margin-top: -4%"> -->
+          <!-- <img src="images/logo.png" id="imgne" style="width: 114%; margin-top: -4%"> -->
         </div>
         <div class="col-xl-6 order-xl-first">
           <h1 id="text1">Hai, Kami dari SIPS</h1>

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/login_assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/login_assets/css/main.css">
 
-	<link rel="shortcut icon" href="<?=base_url()?>assets/images/logo.jpeg" />
+	<link rel="shortcut icon" href="<?=base_url()?>images/logo.png" />
 
 	<style>
 		.field-icon {
@@ -32,7 +32,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic">
-					<img src="<?=base_url()?>assets/login_assets/images/lala.png">
+					<img src="<?=base_url()?>images/logo2.png" style="margin-top: -20%;">
 				</div>
 
 				<form class="login100-form validate-form" method="post">
@@ -46,7 +46,7 @@
 					}
 					?>
 					<span class="login100-form-title">
-						Datasoft Login
+						Form Login
 					</span>
 					<div class="wrap-input100 validate-input">
 						<input class="input100"  type="text" name="username" required="" id="input1" placeholder="Username">
@@ -62,7 +62,7 @@
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
-						<span toggle="#password-field" class="fa fa-eye field-icon toggle-password"></span>
+						<!-- <span toggle="#password-field" class="fa fa-eye field-icon toggle-password"></span> -->
 					</div>
 					<span>
 					</span>
@@ -71,9 +71,9 @@
 						<button class="login100-form-btn" style="margin-top: -10px" name="login" type="submit">Login</button>
 					</div>
 					<div class="text-center" style="margin-top: 10px">
-						<a class="txt2" href="#">
+						<!-- <a class="txt2" href="#">
 							Lupa Username / Password?
-						</a>
+						</a> -->
 					</div>
 					<div class="text-center p-t-135">
 					
@@ -105,7 +105,7 @@
 		</script>
 
 
-		<script src="assets/login_assets/js/main.js"></script>
+		<script src="<?=base_url()?>assets/login_assets/js/main.js"></script>
 
 	</body>
 	</html>
