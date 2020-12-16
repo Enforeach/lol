@@ -295,7 +295,7 @@
         <div class="col-xl-6 order-xl-first">
           <h1 id="text1">Hai, Kami dari SIPS</h1>
           <br>
-          <h5 id="text2">Daftarkan diri anda untuk menjadi bagian dari kami.</h5>
+          <h5 id="text2">Daftarkan diri anda.</h5>
           <h5 id="text3">Silahkan lanjutkan dengan mengklik tombol ini.</h5>
           <br>
           <button type="button" id="btn-daftar" href="#regis" class="btn btn-primary scroll btn-round mb-5 textq">Registrasi</button>

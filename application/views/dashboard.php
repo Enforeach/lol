@@ -115,7 +115,7 @@ function tgl_indonesia($tanggal){
         <div class="card-body">
           <div class="clearfix">
             <div class="float-left">
-              <i class="mdi mdi-account-location text-info icon-lg"></i>
+              <i class="mdi mdi-account-convert text-info icon-lg"></i>
             </div>
             <div class="float-right">
               <p class="mb-0 text-right" style="color: black">History</p>
@@ -272,7 +272,7 @@ function tgl_indonesia($tanggal){
             <i class="mdi mdi-email text-danger icon-lg"></i>
           </div>
           <div class="float-right">
-            <p class="mb-0 text-right" style="color: black">Buat Surat</p>
+            <p class="mb-0 text-right" style="color: black; font-size: 25px;"><b>Buat Surat</b></p>
             <div class="fluid-container">
               <h3 class="font-weight-medium text-right mb-0" style="color: black">
 

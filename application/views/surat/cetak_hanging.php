@@ -117,7 +117,7 @@ foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 		$content .="<table>
 		<tr>
 		<td>
-		<p class='la'>".$key->isi."</p></td>
+		<p>".$key->isi."</p></td>
 		</tr>
 		<tr>
 		<td style='height: 10px;'> </td>

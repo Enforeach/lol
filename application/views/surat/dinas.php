@@ -258,7 +258,7 @@
                                                                     <label for="" class="control-label">Jabatan</label>
                                                                     <div>
                                                                         <input type="text" name="jabatan" placeholder="contoh: Direktur" class="form-control">
-                                                                        <input type="hidden" name="tipe" value="<?= $tipe ?>" class="form-control">
+                                                                        <input type="text" name="tipe" value="<?= $tipe ?>" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>
