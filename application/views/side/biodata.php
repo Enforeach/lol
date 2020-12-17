@@ -11,17 +11,7 @@
 		/*reload*/
 	}
 
-	.card{
-		width: 350px;
-		position: relative;
-		top: 250px;
-		left: 50%;
-		/*reload*/
-		transform: translate(-50%, -50%);
-		overflow: hidden;
-		/*reload*/
-		/*box-shadow: 0 5px 5px white;*/
-	}
+
 
 	.card-header{
 		position: relative;
@@ -92,16 +82,16 @@
 	}
 
 	.card-header .loc{
-		position: absolute;
 		left: 20px;
-		color: #31aedd;
+		text-align: justify;
+		color: black;
 	}
 
 	.card-header .loca{
 		position: absolute;
 		bottom: 20px;
 		left: 20px;
-		color: black;
+		color: white;
 		opacity: .5;
 	}
 
@@ -168,12 +158,10 @@
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-header">
-								<img src="<?= site_url('assets/Bio.jpg') ?>" width="310" alt="">
-								<div class="cover">
-								</div>
+								<img src="<?= site_url('images/Biodata.jpg') ?>" style="width: 100%" alt="">
 
 								<div class="loca">
-									<span class="last" style="padding-left: 20px; bottom: 20px;">Alwi</span>
+									<span class="last" style="padding-left: 20px; bottom: 20px;">Dion</span>
 								</div>
 							</div>
 							<div class="container">
@@ -186,35 +174,40 @@
 
 					<div class="col-md-8">
 						<div class="card" style="width: 100%; box-shadow: 0 30px 35px 5px black">
-							<div class="card-header"  style="background-color: #21252900;">
-								<div class="loc" style="">
-									<span style="padding-left: 40px; font-size: 12px;">SIPS (Sistem Pengelolaan Surat) merupakan sebuah aplikasi yang dikembangkan dengan memuat menu dari fungsi-fungsi kegiatan surat menyurat-menyurat, yang dapat digunakan sebagai media pembelajaran mata pelajaran korespondensi khususnya dalam kegiatan praktikum penulisan sebuah surat. Aplikasi SIPS merupakan kategori media pembelajaran interaktif yang digunakan sebagai alat bantu berbasis website dan dirancang khusus untuk membantu pembelajaran korespondensi khususnya pada saat praktikum membuat surat oleh peserta didik. Aplikasi ini tentunya juga dapat digunakan untuk pembelajaran jarak jauh (distance learning) yang memanfaatkan teknologi komputer atau jaringan komputer atau internet serta akan sangat membantu proses pembelajaran peserta didik dan guru tidak dituntut dalam satu ruang dan satu waktu.
+							<div class="card-header" style="background-color: #21252900; height: 100%;">
+								<div class="loc">
+									<span style="font-size: 13px;">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIPS (Sistem Pengelolaan Surat) merupakan sebuah aplikasi yang dikembangkan dengan memuat menu dari fungsi-fungsi kegiatan surat menyurat-menyurat, yang dapat digunakan sebagai media pembelajaran mata pelajaran korespondensi khususnya dalam kegiatan praktikum penulisan sebuah surat. Aplikasi SIPS merupakan kategori media pembelajaran interaktif yang digunakan sebagai alat bantu berbasis website dan dirancang khusus untuk membantu pembelajaran korespondensi khususnya pada saat praktikum membuat surat oleh peserta didik. Aplikasi ini tentunya juga dapat digunakan untuk pembelajaran jarak jauh (distance learning) yang memanfaatkan teknologi komputer atau jaringan komputer atau internet serta akan sangat membantu proses pembelajaran peserta didik dan guru tidak dituntut dalam satu ruang dan satu waktu.
 										<br><br>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aplikasi SIPS (Sistem Pengelolaan Surat) ini dibuat sebagai media pembelajaran pada mata pelajaran Korespondensi Semester 2. 
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aplikasi SIPS (Sistem Pengelolaan Surat) ini dibuat sebagai media pembelajaran pada mata pelajaran Korespondensi Semester 2. 
 										Aplikasi SIPS dapat 
 										Digunakan oleh seluruh elemen , baik itu guru maupun siswa pada Kompetensi Keahlian OTKP (Otomatisasi Tata Kelola Perkantoran) Kelas X Kurikulum 2013 Revisi 2017. 
 
 										Aplikasi ini dikembangkan oleh Dion Hendriansyah, seorang mahasiwa Program Studi S1 Pendidikan Administrasi Perkantoran Jurusan Manajemen Fakultas Ekonomi dan Bisnis di Universitas Negeri Malang. 
 
-									Balmond, sapaan akrabnya mengembangkan media pembelajaran ini saat menyelesaikan Program Studinya dengan Mengerjakan Skripsi untuk meraih gelar Sarjana Pendidikan (S.Pd.). </span>
+										Balmond, sapaan akrabnya mengembangkan media pembelajaran ini saat menyelesaikan Program Studinya dengan Mengerjakan Skripsi untuk meraih gelar Sarjana Pendidikan (S.Pd.).
+									</span>
 								</div>
 							</div>
 							<div class="container">
 								<div class="left-section">
-									<p style="color: black; text-align: center;"> <b><i class="fa fa-book"></i> S I P S</b>&nbsp;Balmond dapat dihubngi melalui kontak <a href="https://dionp.arum@gmail.com"> dionp.arum@gmail.com</a> dan +6285669966496</p>
-									</div> 
-								</div>
+									<p style="color: black;"> <b><i class="fa fa-book"></i> S I P S</b></p>
+								</div> 
+								<div class="right-section">
+									<p style="color: black;font-size: 12px;">Balmond dapat dihubngi melalui kontak <a href="https://dionp.arum@gmail.com"> dionp.arum@gmail.com</a> dan +6285669966496</p>
+								</div> 
 							</div>
 						</div>
-
-
-
-
 					</div>
 
 
-					<!-- col md12 -->
+
+
 				</div>
+
+
+				<!-- col md12 -->
 			</div>
-			<!-- col mmd12-->
 		</div>
+		<!-- col mmd12-->
+	</div>

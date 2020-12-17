@@ -140,7 +140,7 @@ function tgl_indonesia($tanggal){
                   <div class="card-body" style="background-color: #f2f2f2; color: grey !important">
                     <div class="clearfix">
                       <div class="float-left">
-                        <i class="mdi mdi-account-convert icon-md"></i>
+                        <i class="mdi mdi-library-books icon-md"></i>
                       </div>
                       <div class="float-right">
                         <p class="mb-0 text-right">Semua Surat</p>
@@ -238,7 +238,7 @@ function tgl_indonesia($tanggal){
   <!-- awal  -->
   <div class="col-md-6 grid-margin">
     <div class="card card-statistics cardku">
-      <a href="<?= site_url('Korka') ?>" class="hilih" style="text-decoration:none; color: black">
+      <a href="<?= site_url('Home/Materi') ?>" class="hilih" style="text-decoration:none; color: black">
         <div class="card-body">
           <div class="clearfix">
             <div class="float-left">
@@ -248,13 +248,12 @@ function tgl_indonesia($tanggal){
               <p class="mb-0 text-right">Materi</p>
               <div class="fluid-container">
                 <h3 class="font-weight-medium text-right mb-0">
-                  0
                 </h3>
               </div>
             </div>
           </div>
           <p class="text-muted mt-3 mb-0">
-            <i class="mdi mdi-account mr-1" aria-hidden="true"></i> Total materi
+            <i class="mdi mdi-account mr-1" aria-hidden="true"></i> Materi
           </p>
         </div>
       </a>

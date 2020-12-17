@@ -16,4 +16,13 @@ class Home extends Core {
 		}
 		$this->renderpage('dashboard');
 	}
+
+	public function Materi()
+	{
+		if(!$this->isLogin){
+			redirect('Auth');
+			die();
+		}
+		$this->renderpage('materi');
+	}
 }

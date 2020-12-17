@@ -145,7 +145,7 @@ class M_operator extends CI_Model
       $check = '<input type="checkbox" id="'.$val->NAMA_SINGKAT.'" class="checkitem" name="cek[]" onclick="la(\'' .$val->NAMA_SINGKAT. '\', \'' .$val->FOTO. '\')" />' ;
       $btn = '';
       if($this->session->userdata('NAMA_SINGKAT') != $val->NAMA_SINGKAT){
-      $btn .= '<a href="'.site_url('Operator/detailOperator/'.$val->NAMA_SINGKAT).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a> ';
+      $btn .= '<a href="'.site_url('Operator/detailOperator/'.$val->NAMA_SINGKAT).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>';
         $btn .= '<a href="'.site_url('Operator/Operator_edit/'.$val->NAMA_SINGKAT).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
         <a href="#" data-url="'.site_url('Operator/Operator_delete/'.$val->NAMA_SINGKAT).'" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a> ';
         $btn .= '<a href="#" data-url="'.site_url('Operator/Operator_reset/'.$val->NAMA_SINGKAT).'" class="btn btn-warning btn-xs btn-reset" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Reset Password"><i class="mdi mdi-key"></i></a>';
