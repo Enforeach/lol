@@ -16,12 +16,9 @@
               <h3 class="text-center">Surat Yang Pernah Dibuat</h3>
               <br>
               <div id="table-responsive">
-                <table class="table table-striped datatable-ku">
+                <table class="table table-striped datatable-ku" data-func="side" data-meth="history_datatable<?=$tipe?>">
                   <thead>
                     <tr>
-                      <th data-orderable="false">
-                        <input type="checkbox" id="checkall" onclick="lala();">
-                      </th>
                       <th data-orderable="false">Aksi</th>
                       <th>Jenis Surat</th>
                       <th>Tanggal Pembuatan</th>
@@ -31,15 +28,6 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input type="checkbox" id="checkall"></td>
-                      <td data-orderable="false">
-                        <a href="" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>
-                        <a href="" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
-                        <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a></td>
-                        <td>Anu</td>
-                        <td>12-12-2020</td>
-                        <td>PT. anu</td>
-                        <td>12/IX/15</td>
                       </tr>
                     </tbody>
                   </table>

@@ -69,25 +69,25 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Side/History') ?>">
+              <a class="nav-link" href="<?= site_url('Side/History/All') ?>">
                 <i class="menu-icon mdi mdi-library-books icon-md"></i>
                 <span class="menu-title">Semua Surat</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Create/History') ?>">
+              <a class="nav-link" href="<?= site_url('Side/History/Pribadi') ?>">
                 <i class="menu-icon mdi mdi-account-circle icon-md"></i>
                 <span class="menu-title">Surat Pribadi</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Create/Dinas') ?>">
+              <a class="nav-link" href="<?= site_url('Side/History/Dinas') ?>">
                 <i class="menu-icon mdi mdi-account-multiple-outline icon-md"></i>
                 <span class="menu-title">Surat Dinas</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= site_url('Create/Niaga') ?>">
+              <a class="nav-link" href="<?= site_url('Side/History/Niaga') ?>">
                 <i class="menu-icon mdi mdi-chart-pie icon-md"></i>
                 <span class="menu-title">Surat Niaga</span>
               </a>
