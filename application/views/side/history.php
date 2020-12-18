@@ -5,8 +5,8 @@
     <!-- alert -->
     <div class="row">
 
-      <a href="#" onclick="haha()" class="btn btn-danger btn-rounded btn-fw"  style="width: 200px; margin-left: 13px; margin-bottom: 10px">
-        <span><i class="fa fa-trash"></i></span> Hapus Data Terpilih</a>
+      <!-- <a href="#" onclick="haha()" class="btn btn-danger btn-rounded btn-fw"  style="width: 200px; margin-left: 13px; margin-bottom: 10px">
+        <span><i class="fa fa-trash"></i></span> Hapus Data Terpilih</a> -->
 
       </div>
       <div class="row" >

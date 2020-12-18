@@ -37,26 +37,12 @@ class M_user extends CI_Model
   public function set($id)
   {
     $this->db->select("*");
-    $this->db->from("dsosys_operator");
-    $this->db->where("NAMA_SINGKAT", $id);
+    $this->db->from("tb_siswa");
+    $this->db->where("username", $id);
     $query = $this->db->get()->row();
     $data = array(
-      'NAMA_SINGKAT' => $this->input->post('NAMA_SINGKAT'),
-      'NAMA_LENGKAP' => $this->input->post('NAMA_LENGKAP'),
-      'POSISI' => $this->input->post('POSISI'),
-      // 'PASSWORD' => md5($this->input->post('PASSWORD')),
-      'ALAMAT' => $this->input->post('ALAMAT'),
-      'KOTA' => $this->input->post('KOTA'),
-      'EMAIL' => $this->input->post('EMAIL'),
-      'NOMOR_TELEPHON' => $this->input->post('NOMOR_TELEPHON'),
-      // 'FOTO' => $getFoto,
-      // 'PERIODE_AKTIF' => $this->input->post('PERIODE_AKTIF'),
-      'COUNTER' => $this->input->post('COUNTER'),
-      'KODE_TRANS' => $this->input->post('KODE_TRANS'),
-      'JAM_KERJA' => $this->input->post('JAM_KERJA'),
-      'WEWENANG' => $this->input->post('WEWENANG'),
-      // 'EDIT' => $this->input->post('EDIT'),
-      'INDIKATOR' => $this->input->post('INDIKATOR'),
+      'username' => $this->input->post('username'),
+      'nama_lengkap' => $this->input->post('nama_lengkap'),
     );
     $this->session->set_userdata($data);
   }
@@ -93,40 +79,27 @@ class M_user extends CI_Model
   public function getUser($iduser)
   {
     $this->db->select("*");
-    $this->db->from("dsosys_operator");
-    $this->db->where("NAMA_SINGKAT", $iduser);
+    $this->db->from("tb_siswa");
+    $this->db->where("username", $iduser);
     return $this->db->get()->row();
   }
 
-  public function editUser($nama_singkat)
+  public function editUser($username)
   {
-    if (empty($this->input->post('PASSWORD'))) {
+    if (empty($this->input->post('password'))) {
      $data = array(
-      'NAMA_SINGKAT' => $this->input->post('NAMA_SINGKAT'),
-      'NAMA_LENGKAP' => $this->input->post('NAMA_LENGKAP'),
-      'POSISI' => $this->input->post('POSISI'),
-      'ALAMAT' => $this->input->post('ALAMAT'),
-      'KOTA' => $this->input->post('KOTA'),
-      'EMAIL' => $this->input->post('EMAIL'),
-      'NOMOR_TELEPHON' => $this->input->post('NOMOR_TELEPHON'),
-      // 'FOTO' => $getFoto,
-      // 'PERIODE_AKTIF' => $this->input->post('PERIODE_AKTIF'),
-      'COUNTER' => $this->input->post('COUNTER'),
-      'KODE_TRANS' => $this->input->post('KODE_TRANS'),
-      'JAM_KERJA' => $this->input->post('JAM_KERJA'),
-      'WEWENANG' => $this->input->post('WEWENANG'),
-      // 'EDIT' => $this->input->post('EDIT'),
-      'INDIKATOR' => $this->input->post('INDIKATOR'),
+      'username' => $this->input->post('username'),
+      'nama_lengkap' => $this->input->post('nama_lengkap'),
       'FOTO' => $query->FOTO.'.'.$ext
     );
    }else {
      $data = array(
-      'PASSWORD' => md5($this->input->post('PASSWORD')),
+      'password' => md5($this->input->post('password')),
     );
    }
    
 
-   $this->db->where("NAMA_SINGKAT", $nama_singkat);
-   return $this->db->update("dsosys_operator", $data);
+   $this->db->where("username", $username);
+   return $this->db->update("tb_siswa", $data);
  }
 }

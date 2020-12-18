@@ -145,6 +145,7 @@ class Create extends Core {
 		$result = $this->m_surat->getMax();
 		echo json_encode($result);
 	}
+
 	public function add_surat_dinas()
 	{
 		$nama_instansi = $this->input->post('kop_surat');

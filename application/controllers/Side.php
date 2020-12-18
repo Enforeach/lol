@@ -36,6 +36,19 @@ class Side extends Core {
 		$data['tipe'] = $tipe;
 		$this->renderpage('side/history', $data);
 	}
+
+	public function edit_surat_pribadi()
+	{
+		$this->renderpage('surat/edit_pribadi');
+	}
+
+		public function edit_surat($title)
+	{
+		$data['title'] = $title; //dinas/niaga
+		$data['tipe'] = 'ben gak muncul error';
+		$this->renderpage('surat/edit_surat_d_n', $data);
+	}
+
 	public function history_datatableAll()
 	{
 		$history = $this->m_history->datatableHistoryAll();

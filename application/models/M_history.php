@@ -141,15 +141,15 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id = 1) {
+      if ($val->id == 1) {
         $jenis = 'Pribadi';
-      }elseif ($val->id = 3) {
+      }elseif ($val->id == 2) {
         $jenis = 'Dinas';
       }else {
         $jenis = "Niaga";
       }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
+      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 
@@ -207,15 +207,15 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id = 1) {
+      if ($val->id == 1) {
         $jenis = 'Pribadi';
-      }elseif ($val->id = 2) {
+      }elseif ($val->id == 2) {
         $jenis = 'Dinas';
       }else {
         $jenis = "Niaga";
       }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
+      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      <a href="'.site_url('Side/edit_surat_pribadi/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 
@@ -273,15 +273,15 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id = 1) {
+      if ($val->id == 1) {
         $jenis = 'Pribadi';
-      }elseif ($val->id = 2) {
+      }elseif ($val->id == 2) {
         $jenis = 'Dinas';
       }else {
         $jenis = "Niaga";
       }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
+      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 
@@ -339,15 +339,15 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id = 1) {
+      if ($val->id == 1) {
         $jenis = 'Pribadi';
-      }elseif ($val->id = 2) {
+      }elseif ($val->id == 2) {
         $jenis = 'Dinas';
       }else {
         $jenis = "Niaga";
       }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Detail"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit"><i class="mdi mdi-pencil"></i></a>
+      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 

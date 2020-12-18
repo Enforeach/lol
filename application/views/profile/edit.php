@@ -27,7 +27,7 @@
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Nama Lengkap</label>
                                                         <div>
-                                                            <input type="text" class="form-control" name="NAMA_LENGKAP" value="<?= $user->NAMA_LENGKAP ?>">
+                                                            <input type="text" class="form-control" name="nama_lengkap" value="<?= $user->nama_lengkap ?>">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -35,64 +35,7 @@
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Username</label>
                                                         <div>
-                                                            <input type="text" class="form-control" name="NAMA_SINGKAT" value="<?= $user->NAMA_SINGKAT ?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="email" class="col-md-12 control-label">E-Mail Address</label>
-                                            <div class="col-md-12">
-                                                <input id="email" type="email" class="form-control" name="EMAIL" value="<?= $user->EMAIL ?>" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="" class="control-label">No. Telepon</label>
-                                                        <div>
-                                                            <input type="Number" class="form-control" name="NOMOR_TELEPHON" value="<?= $user->NOMOR_TELEPHON ?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="" class="control-label">Kota Tempat Tinggal</label>
-                                                        <div>
-                                                            <input type="text" class="form-control" name="KOTA" value="<?= $user->KOTA ?>" placeholder="contoh: batu, malang, surabaya">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="" class="col-md-12 control-label">alamat</label>
-                                            <div class="col-md-12">
-                                                <textarea type="text" name="ALAMAT" class="form-control" rows="5" ><?= $user->ALAMAT ?></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="" class="control-label">Posisi</label>
-                                                        <div>
-                                                            <input type="text" name="POSISI" class="form-control" value="<?= $user->POSISI ?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="" class="control-label">Jam Kerja</label>
-                                                        <div>
-                                                            <input type="number" name="JAM_KERJA" class="form-control" value="<?= $user->JAM_KERJA ?>">
-                                                            <input id="password" type="hidden" class="form-control" value="<?= $user->PASSWORD ?>" name="passwordlama">
+                                                            <input type="text" class="form-control" name="username" value="<?= $user->username ?>">
                                                         </div>
                                                     </div>
                                                 </div>
