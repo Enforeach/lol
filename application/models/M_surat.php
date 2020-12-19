@@ -27,6 +27,17 @@ class M_surat extends CI_Model
   {
     $this->db->insert($table, $data);
   }
+    public function edit_surata($table, $data, $id)
+  {
+    
+    $this->db->where("id_detail", $id);
+    $this->db->update("tb_detail_surat", $data);
+  }
+    function Surat_delete($where,$table){
+
+    $this->db->where($where);
+    $this->db->delete($table);
+  }
   public function getSurat($nama_singkat)
   {
     $this->db->select("*");

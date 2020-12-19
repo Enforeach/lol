@@ -228,7 +228,89 @@ class Create extends Core {
 		echo json_encode($id_isi);
 
 	}
+	public function edit_surat_dinas()
+	{
+		$id_detail = $this->input->post('id_detail');
+		$nama_instansi = $this->input->post('kop_surat');
+		$jenis_instansi = $this->input->post('jenis_instansi');
+		$alamat = $this->input->post('alamat');
+		$telp = $this->input->post('telp');
+		$nomor = $this->input->post('nomor');
+		$lampiran = $this->input->post('lampiran');
+		$perihal = $this->input->post('perihal');
 
+		$nama_tujuan = $this->input->post('nama_tujuan');
+		$alamat_tujuan = $this->input->post('alamat_tujuan');
+		$kota_tujuan = $this->input->post('kota_tujuan');
+
+		$tanggal = $this->input->post('tanggal');
+		$salam_pembuka = $this->input->post('salam_pembuka');
+		$salam_penutup = $this->input->post('salam_penutup');
+		$nama = $this->input->post('nama');
+		$jabatan = $this->input->post('jabatan');
+
+		$id_isi = $this->m_surat->getIsi($id_detail);
+
+		$id = $this->m_surat->getMax();
+		$id = $id + 1;
+
+		if (!empty($_FILES['imageUpload']['name'])) {
+			if($this->upload_images($id, './images/logo_surat', 'imageUpload')){
+				$file_ext = explode('.', $_FILES['imageUpload']['name']);
+				$file_ext = strtolower(end($file_ext));
+
+				$data = array(
+					'nama_instansi' => $nama_instansi,
+					'jenis_instansi' => $jenis_instansi,
+					'alamat' => $alamat,
+					'telp' => $telp,
+					'nomor' => $nomor,
+					'lampiran' => $lampiran,
+					'perihal' => $perihal,
+					'alamat_tujuan' => $alamat_tujuan,
+					'nama_tujuan' => $nama_tujuan,
+					'kota_tujuan' => $kota_tujuan,
+					'jabatan' => $jabatan,
+					'logo' => $id.".".$file_ext,
+					'nama' => $nama,
+					'tgl' => $tanggal,
+					'salam_pembuka' => $salam_pembuka,
+					'salam_penutup' => $salam_penutup,
+					'username' => $this->session->userdata('username'),
+					'id_isi' => $id_isi,
+					'id' => 2
+				);
+			}
+		}else {
+			$data = array(
+				'nama_instansi' => $nama_instansi,
+				'jenis_instansi' => $jenis_instansi,
+				'alamat' => $alamat,
+				'telp' => $telp,
+				'nomor' => $nomor,
+				'lampiran' => $lampiran,
+				'perihal' => $perihal,
+				'alamat_tujuan' => $alamat_tujuan,
+				'nama_tujuan' => $nama_tujuan,
+				'kota_tujuan' => $kota_tujuan,
+				'jabatan' => $jabatan,
+				'nama' => $nama,
+				'tgl' => $tanggal,
+				'salam_pembuka' => $salam_pembuka,
+				'salam_penutup' => $salam_penutup,
+				'username' => $this->session->userdata('username'),
+				'id_isi' => $id_isi,
+				'id' => 2
+			);
+		}
+
+
+		$this->m_surat->edit_surata('tb_detail_surat', $data, $id_detail);
+		$where = array('id_isi' => $id_isi);
+		$this->m_surat->Surat_delete($where,'tb_isi');		
+		echo json_encode($id_isi);
+
+	}
 	public function isi($id)
 	{
 		$id_isi = $id;				
@@ -250,4 +332,5 @@ class Create extends Core {
 		$result = $this->m_surat->getMax();
 		echo json_encode($result);
 	}
+
 }

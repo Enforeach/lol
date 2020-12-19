@@ -29,6 +29,7 @@
                                                                     <label for="" class="control-label">Nama Instansi</label>
                                                                     <div>
                                                                         <input type="text" name="kop_surat" class="form-control" value="<?= $surat->nama_instansi ?>" placeholder="contoh: PT. Induk Jaya">
+                                                                         <input type="hidden" name="id_detail" class="form-control" value="<?= $surat->id_detail ?>" placeholder="contoh: PT. Induk Jaya">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -224,7 +225,7 @@
 <textarea type="text" name="isi<?=$no?>" id="isi<?=$no?>" onblur="lololo('isi<?=$no?>');" class="form-control" value=""><?=$key->isi?></textarea>
 </div>
 
-<input type="hidden" id="pantau<?=$no?>" class="form-control" value="para">
+<input type="hidden" id="pantau<?=$no?>" class="form-control" value="<?=$key->jenis?>">
 <div class="col-md-3" id="place<?=$no?>">
 
 </div>
@@ -247,7 +248,7 @@
 <textarea type="text" name="isi<?=$no?>" id="isi<?=$no?>" onblur="lololo('isi<?=$no?>');" class="form-control" value=""><?=$key->isi?></textarea>
 </div>
 
-<input type="hidden" id="pantau<?=$no?>" class="form-control" value="li">
+<input type="hidden" id="pantau<?=$no?>" class="form-control" value="<?=$key->jenis?>">
 <div class="col-md-3" id="place<?=$no?>">
 
 </div>
@@ -371,10 +372,13 @@
             line = parseInt(line);
             var par = 1;
             var isi = [];
+            var jenis_isi = [];
             for (var i = 1; i <= line; i++) {
                 isi.push($('#isi'+i).val())
             }
-            var jenis_isi = ['par'];
+            for (var i = 1; i <= line; i++) {
+                jenis_isi.push($('#isi'+i).val())
+            }
             var list = 0;
             var sav = "";
             $('#tambaha').click(function(){
@@ -481,7 +485,7 @@
                     $.ajax({
                       type:'POST',
                       data:new FormData(this),
-                      url:'<?= site_url('Create/add_surat_dinas') ?>',
+                      url:'<?= site_url('Create/edit_surat_dinas') ?>',
                       processData: false,
                       contentType: false,  
                       cache:false,
@@ -504,7 +508,7 @@
                     $.ajax({
                       type:'POST',
                       data:new FormData(this),
-                      url:'<?= site_url('Create/add_surat_dinas') ?>',
+                      url:'<?= site_url('Create/edit_surat_dinas') ?>',
                       processData: false,
                       contentType: false,  
                       cache:false,
