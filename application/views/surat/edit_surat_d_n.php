@@ -28,7 +28,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama Instansi</label>
                                                                     <div>
-                                                                        <input type="text" name="kop_surat" class="form-control" value="" placeholder="contoh: PT. Induk Jaya">
+                                                                        <input type="text" name="kop_surat" class="form-control" value="<?= $surat->nama_instansi ?>" placeholder="contoh: PT. Induk Jaya">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -36,7 +36,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Jenis Instansi</label>
                                                                     <div>
-                                                                        <input type="text" name="jenis_instansi" class="form-control" value="" placeholder="contoh: Manufaktur">
+                                                                        <input type="text" name="jenis_instansi" class="form-control" value="<?= $surat->jenis_instansi ?>" placeholder="contoh: Manufaktur">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -49,7 +49,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Alamat</label>
                                                                     <div class="">
-                                                                        <textarea type="text" name="alamat" class="form-control" value=""> </textarea>
+                                                                        <textarea type="text" name="alamat" class="form-control"> <?= $surat->alamat ?> </textarea>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -57,7 +57,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Kota</label>
                                                                     <div>
-                                                                        <input type="text" name="kota" class="form-control" value="" placeholder="contoh: Malang">
+                                                                        <input type="text" name="kota" class="form-control" value="<?= $surat->kota ?>" placeholder="contoh: Malang">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -70,7 +70,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Telp / HP</label>
                                                                     <div>
-                                                                        <input type="text" name="telp" class="form-control" value="" placeholder="contoh: 08xxxxxx">
+                                                                        <input type="text" name="telp" class="form-control" value="<?= $surat->telp ?>" placeholder="contoh: 08xxxxxx">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -78,7 +78,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Website</label>
                                                                     <div>
-                                                                        <input type="text" name="website" class="form-control" value="" placeholder="contoh: www/https://indonesiamerkeda.com">
+                                                                        <input type="text" name="website" class="form-control" value="<?= $surat->website ?>" placeholder="contoh: www/https://indonesiamerkeda.com">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -94,7 +94,7 @@
                                                                     <!-- wajib  -->
                                                                     <label for="" class="control-label">Tanggal</label>
                                                                     <div class="input-group date">
-                                                                        <input type="text" id="basicDate" name="tanggal" value="" class="form-control"
+                                                                        <input type="text" id="basicDate" name="tanggal" value="<?= $surat->tgl ?>" class="form-control"
                                                                         placeholder="Tanggal" style="height: 34.5px" required>
                                                                         <div class="input-group-append"  style="height: 34.5px">
                                                                             <span class="input-group-text">
@@ -109,7 +109,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nomor Surat</label>
                                                                     <div>
-                                                                        <input type="text" name="nomor" class="form-control" value="" placeholder="contoh: 187/AM/IX/2015">
+                                                                        <input type="text" name="nomor" class="form-control" value="<?= $surat->nomor ?>" placeholder="contoh: 187/AM/IX/2015">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -122,7 +122,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Perihal</label>
                                                                     <div>
-                                                                        <input type="text" name="perihal" class="form-control" value="" placeholder="contoh: PEMBERITAHUAN">
+                                                                        <input type="text" name="perihal" class="form-control" value="<?= $surat->perihal ?>" placeholder="contoh: PEMBERITAHUAN">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -130,7 +130,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Lampiran</label>
                                                                     <div>
-                                                                        <input type="text" name="lampiran" class="form-control" value="" placeholder="">
+                                                                        <input type="text" name="lampiran" class="form-control" value="<?= $surat->lampiran ?>" placeholder="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -146,7 +146,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama Instansi</label>
                                                                     <div>
-                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: PT. KARYA JAYA">
+                                                                        <input type="text" name="nama_tujuan" class="form-control" value="<?= $surat->nama_tujuan ?>" placeholder="contoh: PT. KARYA JAYA">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -155,7 +155,7 @@
                                                                     <label for="" class="control-label">Alamat</label>
                                                                     <div>
                                                                         <div class="">
-                                                                            <textarea type="text" name="alamat_tujuan" class="form-control" value=""> </textarea>
+                                                                            <textarea type="text" name="alamat_tujuan" class="form-control" value="<?= $surat->alamat_tujuan ?>"> </textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -169,7 +169,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Kota</label>
                                                                     <div>
-                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Kebumen">
+                                                                        <input type="text" name="kota_tujuan" class="form-control" value="<?= $surat->kota_tujuan ?>" placeholder="contoh: Kebumen">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -185,7 +185,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Pembuka</label>
                                                                     <div>
-                                                                        <input type="text" name="salam_pembuka" class="form-control" value="" placeholder="contoh: Hormat Kami">
+                                                                        <input type="text" name="salam_pembuka" class="form-control" value="<?= $surat->salam_pembuka ?>" placeholder="contoh: Hormat Kami">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -203,23 +203,68 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <label for="" class="control-label mt-3" style="color: gray; font-size: 12px;">Paragraf 1</label>
-                                                                    <div class="row">
-                                                                        <div class="col-md-9">
-                                                                            <textarea type="text" name="isi" id="isi1" class="form-control" onblur="lololo('isi1');" value=""> </textarea>
-                                                                        </div>
 
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                    <?php  
+                                                                    $no = 0;
+                                                                    $par = 0;
+                                                                    $li = 0;
+                                                                    foreach ($isi as $key) { 
+                                                                        if ($key->jenis == "par") { 
+                                                                            $no = $no + 1;
+                                                                            $li = 0;
+                                                                            $par = $par + 1;
+                                                                            ?>
+                <div class="col-md-12" id="lala<?=$no?>">
+<div class="row">
+<div class="col-md-9">
+<div class="form-group">
+<label for="" class="control-label" style="color: gray; font-size: 12px;">Paragraf <?=$par?></label>
+<div class="row">
+<div class="col-md-9">
+<textarea type="text" name="isi<?=$no?>" id="isi<?=$no?>" onblur="lololo('isi<?=$no?>');" class="form-control" value=""><?=$key->isi?></textarea>
+</div>
 
-                                                            <!-- <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <button type="button" class="btn btn-danger" id="hapusa"><i class="fa fa-trash"></i></button>
-                                                                </div>
-                                                            </div> -->
-                                                        </div>
-                                                    </div>
+<input type="hidden" id="pantau<?=$no?>" class="form-control" value="para">
+<div class="col-md-3" id="place<?=$no?>">
+
+</div>
+</div>
+
+                                                                                        <?php }else { 
+                                                                                            $no = $no + 1;
+                                                                                            $li = $li + 1;
+                                                                                            ?>
+               <div class="col-md-12" id="lala<?=$no?>">
+<div class="row">
+<div class="col-md-9">
+<div class="form-group">
+<label for="" class="control-label" style="color: gray; font-size: 12px;">List <?= $li ?></label>
+<div class="row">
+<div class="col-md-1">
+<label for="" class="control-label" style="color: gray; font-size: 15px; padding:22px 10px 10px 35px;">$li.</label>
+</div>
+<div class="col-md-8">
+<textarea type="text" name="isi<?=$no?>" id="isi<?=$no?>" onblur="lololo('isi<?=$no?>');" class="form-control" value=""><?=$key->isi?></textarea>
+</div>
+
+<input type="hidden" id="pantau<?=$no?>" class="form-control" value="li">
+<div class="col-md-3" id="place<?=$no?>">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<?php } if (count($isi) == $no) { ?>
+<div id="trash<?=$no?>">
+
+<button type="button" class="btn btn-danger" id="hapusa<?= $no ?>" onclick="pus('hapusa<?= $no ?>');"><i class="fa fa-trash"></i></button>
+</div>
+
+<?php }}?>
+
 
                                                     <div id="baris">
 
@@ -231,7 +276,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Penutup</label>
                                                                     <div>
-                                                                        <input type="text" name="salam_penutup" class="form-control" value="" placeholder="contoh: Hormat Kami">
+                                                                        <input type="text" name="salam_penutup" class="form-control" value="<?= $surat->salam_penutup ?>" placeholder="contoh: Hormat Kami">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -244,7 +289,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama</label>
                                                                     <div>
-                                                                        <input type="text" name="nama" placeholder="contoh: Indah Setyorini" class="form-control">
+                                                                        <input type="text" name="nama" value="<?= $surat->nama ?>" placeholder="contoh: Indah Setyorini" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -257,8 +302,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Jabatan</label>
                                                                     <div>
-                                                                        <input type="text" name="jabatan" placeholder="contoh: Direktur" class="form-control">
-                                                                        <input type="text" name="tipe" value="<?= $tipe ?>" class="form-control">
+                                                                        <input type="text" name="jabatan" value="<?= $surat->jabatan ?>" placeholder="contoh: Direktur" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -283,11 +327,11 @@
                                         <div class="col-12">
                                             <div class="card">
                                                 <div class="card-body">
-
+                                                    <input type="hidden" id="ln" value="<?= count($isi) ?>">
                                                     <div class="form-group">
                                                         <center><label for="foto" class=" control-label">Logo</label></center>
                                                         <div>
-                                                          <img id="profileImage" width="210" height="210" src="https://i.ibb.co/qxHR5SM/tidakadaphoto.jpg" alt=""
+                                                          <img id="profileImage" width="210" height="210" src="<?= site_url('images/logo_surat/') ?><?=$surat->logo?>" alt=""
                                                           style="display: block;
                                                           border: 1px solid gray;
                                                           margin-left: auto;
@@ -323,9 +367,13 @@
             });
         </script>
         <script type="text/javascript">
-            var line = 1;
+            var line = $('#ln').val();
+            line = parseInt(line);
             var par = 1;
             var isi = [];
+            for (var i = 1; i <= line; i++) {
+                isi.push($('#isi'+i).val())
+            }
             var jenis_isi = ['par'];
             var list = 0;
             var sav = "";

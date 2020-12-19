@@ -472,15 +472,15 @@
                           success: function(hasil){
                             if (data.get("tipe") == "Indented") {
 
-                                success_sweet('Surat berhasil disimpan.','cetak_Indented/'+hasil);
-                            }if (data.get("tipe") == "Hanging") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Hanging/'+hasil);
-                            }if (data.get("tipe") == "Block") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Block/'+hasil);
-                            }if (data.get("tipe") == "Semi") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Semi/'+hasil);
-                            }if (data.get("tipe") == "Full") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Full/'+hasil);
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Indented/") ?>'+hasil);
+                            }if (data.get("tipe") == "Hanging") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Hanging/") ?>'+hasil);
+                            }if (data.get("tipe") == "Block") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Block/") ?>'+hasil);
+                            }if (data.get("tipe") == "Semi") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Semi/") ?>'+hasil);
+                            }if (data.get("tipe") == "Full") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Full/") ?>'+hasil);
                             }
 
 
