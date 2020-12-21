@@ -17,7 +17,32 @@ class Side extends Core {
 		}
 		$this->renderpage('side/biodata');
 	}
+	public function delete_surat ($nama_s)
+	{
 
+		$id_isi = $this->m_surat->getIsi($nama_s);
+		$where = array('id_detail' => $nama_s);
+
+		$where2 = array('id_isi' => $id_isi);
+
+		if (file_exists("./images/logo_surat/".$this->m_surat->getFoto($nama_s, 'logo'))) {
+			unlink("./images/logo_surat/".$this->m_surat->getFoto($nama_s, 'logo'));
+		}
+		$this->m_surat->Surat_delete($where,'tb_detail_surat');
+
+		$this->m_surat->Surat_delete($where2,'tb_isi');
+		return true;
+
+	}
+
+	public function detail_surat($title)
+	{
+		$data['title'] = $title; //dinas/niaga
+		$data['surat'] = $this->m_surat->getSurat($title);
+
+		$data['isi'] = $this->m_surat->getAll($this->m_surat->getIsi($title));
+		$this->renderpage('surat/detail_surat', $data);
+	}
 	public function Rujukan()
 	{
 		if(!$this->isLogin){

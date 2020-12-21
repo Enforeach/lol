@@ -105,19 +105,19 @@ border-radius: 50%;'/>
 <td style='height: 20px;'> </td>
 </tr>
 <tr>
-<td><p>".$surat->salam_pembuka."</p></td>
+<td><p>".$surat->salam_pembuka.",</p></td>
 </tr>
 <tr>
 <td style='height: 10px;'> </td>
 </tr>
 </table>";
+
 $no = 1;
 foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 	if ($key->jenis == "par") {
 		$content .="<table>
 		<tr>
-		<td>
-		<p>".$key->isi."</p></td>
+		<td><p>".$key->isi."</p></td>
 		</tr>
 		<tr>
 		<td style='height: 10px;'> </td>
@@ -137,9 +137,6 @@ foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 		$no = $no + 1;
 	}
 }
-
-
-
 
 $content .="<div style='width: 100%;'>
 <div style='width: 30%; text-align: center; float:right;'>

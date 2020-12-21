@@ -17,6 +17,14 @@ class M_surat extends CI_Model
     $q = $this->db->get()->row();
     return $q->total;  
   }
+    public function getFoto($id, $foto)
+  {
+    $this->db->select(''.$foto.' as foto');
+    $this->db->from("tb_detail_surat");
+    $this->db->where("id_detail", $id);
+    $q = $this->db->get()->row();
+    return $q->foto;
+  }
   public function getMax() {
     $this->db->select_max("id_detail");
     $this->db->from("tb_detail_surat");

@@ -427,7 +427,7 @@ function tgl_indonesia($tanggal){
               <div>
                 <img id="profileImage2" src="" alt="" style="width: 100%;"/>
                 <center><b><u><p id="haha2"> </p></u></b></center>
-                <center><a href="#" id="lala" class="btn btn-warning">Buat</a></center>
+                <center><a href="#" id="lolo" class="btn btn-warning">Buat</a></center>
               </div>
             </div>
           </div>

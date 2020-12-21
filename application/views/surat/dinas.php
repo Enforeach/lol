@@ -191,6 +191,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-9">
@@ -212,12 +213,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-                                                            <!-- <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <button type="button" class="btn btn-danger" id="hapusa"><i class="fa fa-trash"></i></button>
-                                                                </div>
-                                                            </div> -->
                                                         </div>
                                                     </div>
 
@@ -373,7 +368,7 @@
                 Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">List '+list+'</label>';
                 Baris += '<div class="row">';
                 Baris += '<div class="col-md-1">';
-                Baris += '<label for="" class="control-label" style="color: gray; font-size: 15px; padding:22px 10px 10px 35px;">'+list+'.</label>';
+                Baris += '<label for="" class="control-label" style="color: gray; font-size: 15px; padding:22px 10px 10px 20px;">'+list+'.</label>';
                 Baris += '</div>';
                 Baris += '<div class="col-md-8">';
                 Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';

@@ -158,6 +158,7 @@ class Create extends Core {
 
 		$nama_tujuan = $this->input->post('nama_tujuan');
 		$alamat_tujuan = $this->input->post('alamat_tujuan');
+		$kota = $this->input->post('kota');
 		$kota_tujuan = $this->input->post('kota_tujuan');
 
 		$tanggal = $this->input->post('tanggal');
@@ -182,6 +183,7 @@ class Create extends Core {
 				'jenis_instansi' => $jenis_instansi,
 				'alamat' => $alamat,
 				'telp' => $telp,
+				'kota' => $kota,
 				'nomor' => $nomor,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,
@@ -205,6 +207,7 @@ class Create extends Core {
 				'alamat' => $alamat,
 				'telp' => $telp,
 				'nomor' => $nomor,
+				'kota' => $kota,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,
 				'alamat_tujuan' => $alamat_tujuan,
@@ -250,6 +253,7 @@ class Create extends Core {
 		$jabatan = $this->input->post('jabatan');
 
 		$id_isi = $this->m_surat->getIsi($id_detail);
+		$id_isi = $id_isi + 1;
 
 		$id = $this->m_surat->getMax();
 		$id = $id + 1;

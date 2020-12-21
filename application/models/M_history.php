@@ -280,9 +280,9 @@ class M_history extends CI_Model
       }else {
         $jenis = "Niaga";
       }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      $btn = ' <a href="'.site_url('Side/detail_surat/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
       <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
-      <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
+      <a href="#" data-url="'.site_url('Side/delete_surat/'.$val->id_detail).'" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 
       $output['data'][] = array(
