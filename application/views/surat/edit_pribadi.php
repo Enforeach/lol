@@ -1,9 +1,9 @@
         <?php
-        $title = 'Edit Surat Pribadi';
+        $title = 'Buat Surat Pribadi';
         $ftitle = 'Form Create';
         $readonly = '';
         $required = 'required';
-        $submit = 'Edit Surat';
+        $submit = 'Buat Surat';
 
         ?>
         <div class="main-panel">
@@ -57,7 +57,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama Tujuan</label>
                                                                     <div class="">
-                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
+                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: Kakak Desi">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -65,7 +65,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Kota Tujuan</label>
                                                                     <div class="">
-                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
+                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Malang">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -78,7 +78,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Pembuka</label>
                                                                     <div class="">
-                                                                        <input type="text" name="salam_pembuka" class="form-control" value="" placeholder="contoh: Dengan Hormat">
+                                                                        <input type="text" name="salam_pembuka" class="form-control" value="" placeholder="contoh: Salam kangen">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -126,7 +126,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Penutup</label>
                                                                     <div>
-                                                                        <input type="text" name="salam_penutup" class="form-control" value="" placeholder="contoh: Hormat Kami">
+                                                                        <input type="text" name="salam_penutup" class="form-control" value="" placeholder="contoh: Adik tercintamu">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -139,7 +139,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama</label>
                                                                     <div>
-                                                                        <input type="text" name="nama" placeholder="contoh: Adinda" class="form-control">
+                                                                        <input type="text" name="nama" placeholder="contoh: Lala" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -148,7 +148,8 @@
 
                                                     <div class="col-md-12 mt-5">
                                                         <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
-                                                        <button style="margin-left: 10px;" name="save" id="save" class="btn btn-primary pull-right">Update</button>
+                                                        <button style="margin-left: 10px;" name="save" id="save" class="btn btn-primary pull-right">Simpan</button>
+                                                        <button name="savec" id="savec" class="btn btn-primary pull-right">Simpan & Cetak</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -248,7 +249,7 @@
                         if ($("#pantau"+line).val() == "para") {
                             par = par-1;
                         }                       
-                        $("#lala"+line).remove();
+                         $("#lala"+line).remove();
                         line = line-1;
                         var aku = '<div id="trash'+line+'">';
                         aku += '<button type="button" class="btn btn-danger" id="hapusa'+line+'" onclick="pus(\'hapusa\'+line);"><i class="fa fa-trash"></i></button>';

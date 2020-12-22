@@ -57,7 +57,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama Tujuan</label>
                                                                     <div class="">
-                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
+                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: Kakak Desi">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -65,7 +65,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Kota Tujuan</label>
                                                                     <div class="">
-                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Alisandi">
+                                                                        <input type="text" name="kota_tujuan" class="form-control" value="" placeholder="contoh: Malang">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -78,7 +78,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Pembuka</label>
                                                                     <div class="">
-                                                                        <input type="text" name="salam_pembuka" class="form-control" value="" placeholder="contoh: Dengan Hormat">
+                                                                        <input type="text" name="salam_pembuka" class="form-control" value="" placeholder="contoh: Salam kangen">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -126,7 +126,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Salam Penutup</label>
                                                                     <div>
-                                                                        <input type="text" name="salam_penutup" class="form-control" value="" placeholder="contoh: Hormat Kami">
+                                                                        <input type="text" name="salam_penutup" class="form-control" value="" placeholder="contoh: Adik tercintamu">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -139,7 +139,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama</label>
                                                                     <div>
-                                                                        <input type="text" name="nama" placeholder="contoh: Adinda" class="form-control">
+                                                                        <input type="text" name="nama" placeholder="contoh: Lala" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>

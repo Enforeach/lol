@@ -9,15 +9,14 @@
         <div class="col-lg-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h3 class="text-center">Daftar Rujukan</h3>
+              <h3 class="text-center" style="font-family: times-new-roman"><b>Daftar Rujukan</b></h3>
               <br>
               <ul>
-                <li>Arsyad, Alwi. 2010. Penggunaan dan Penerapan Teknologi di Dalam Industri Pertanian dan Perkebunan. Jakarta: Warna Media.</li>
-                <li>Arsyad, Alwi. 2010. Penggunaan dan Penerapan Teknologi di Dalam Industri Pertanian dan Perkebunan. Jakarta: Warna Media.</li>
-                <li>Arsyad, Alwi. 2010. Penggunaan dan Penerapan Teknologi di Dalam Industri Pertanian dan Perkebunan. Jakarta: Warna Media.</li>
-                <li>Arsyad, Alwi. 2010. Penggunaan dan Penerapan Teknologi di Dalam Industri Pertanian dan Perkebunan. Jakarta: Warna Media.</li>
-                <li>Arsyad, Alwi. 2010. Penggunaan dan Penerapan Teknologi di Dalam Industri Pertanian dan Perkebunan. Jakarta: Warna Media.</li>
-                <li>Nagita Shafira. 2012. Kesalahan Yang Sering Dicatat Pada Rekonsiliasi Bank. Jurnal Akuntansi. 10(2): 10-15.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+                <li>Pramono, J., 2017. Korespondensi.  Yogyakarta, Penerbit Andi</li>
+                <li>Rozanna, Cut dkk. 1995. Surat Menyurat dan Komunikasi. Bandung: Penerbit Angkasa</li>
+                <li>https://www.gurupendidikan.co.id/surat-pribadi/</li>
+                <li>https://www.gurupendidikan.co.id/pengertian-surat-niaga/</li>
+                <li>https://www.gurupendidikan.co.id/pengertian-surat-dinas/</li>
               </ul>
               </div>
             </div>

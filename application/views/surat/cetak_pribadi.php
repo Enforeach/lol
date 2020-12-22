@@ -24,7 +24,7 @@ $content = "
 <p style='margin-top:40px;'>Untuk ".$surat->nama_tujuan."</p>
 <p>Di ".$surat->kota_tujuan."</p>
 
-<p style='margin-top:40px;'>Salam kangen,</p>";
+<p style='margin-top:40px;'>".$surat->salam_pembuka.",</p>";
 $no = 1;
 foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 if ($key->jenis == "par") {
