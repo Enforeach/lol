@@ -41,9 +41,8 @@ class Profile extends Core {
 			redirect('Auth');
 			die();
 		}
-		$this->form_validation->set_rules('NAMA_SINGKAT', 'Nama Singkat', 'required');
-		$this->form_validation->set_rules('NAMA_LENGKAP', 'Nama Lengkap', 'required');
-		$this->form_validation->set_rules('EMAIL', 'Email', 'required');
+		$this->form_validation->set_rules('username', 'Nama Singkat', 'required');
+		$this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
 
 		$data['user'] = $this->m_user->getUser($nama_singkat);
 

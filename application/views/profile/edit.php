@@ -8,7 +8,7 @@
           <li class="nav-item">
               <a class="nav-link" data-toggle="tab"  href="#menu1">Pengaturan Akun</a>
           </li>
-        </ul>
+      </ul>
 
       <div class="tab-content">
         <div id="profile" class="tab-pane fade show active">
@@ -72,16 +72,17 @@
                                         <div class="form-group">
                                             <label for="password" class="col-md-4 control-label">Password Baru</label>
                                             <div class="col-md-6">
-                                                <input id="password" type="password" class="form-control" onkeyup='check();' name="PASSWORD">
+                                                <input id="password" type="password" class="form-control" onkeyup='haha();' name="PASSWORD">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password-confirm" class="col-md-4 control-label">Konfirmasi Password</label>
                                             <div class="col-md-6">
-                                                <input id="confirm_password" type="password" class="form-control mb-2" name="password_confirmation">
+                                                <input id="confirm_password" type="password" class="form-control mb-2" onkeyup='haha();' name="password_confirmation">
                                             </div>
                                         </div>
                                         <br>
+                                        <p id="haha"></p>
                                         <div class="col-md-12">
                                             <button type="submit" class="btn btn-primary" id="submit">
                                                 Update
@@ -100,3 +101,18 @@
     </div>
     <!-- akhir content -->
 </div>
+<script type="text/javascript">
+  function haha() {
+    var password = $("#password").val();
+    var confirmPassword = $("#confirm_password").val();
+
+    if (password != confirmPassword) {
+      $('#haha').css("color", "yellow");
+      document.getElementById("haha").innerHTML = "Password tidak cocok";
+
+  }else {
+   $('#haha').css("color", "#03e668");
+   document.getElementById("haha").innerHTML = "Password cocok";
+}
+}
+</script>

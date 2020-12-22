@@ -48,7 +48,7 @@ class Create extends Core {
 		}
 
 		$data['surat'] = $this->m_surat->getSurat($id);
-		$this->renderpage('surat/cetak_full_block');
+		$this->renderpage('surat/cetak_full_block', $data);
 	}
 
 	public function cetak_Block($id)
@@ -59,7 +59,7 @@ class Create extends Core {
 		}
 
 		$data['surat'] = $this->m_surat->getSurat($id);
-		$this->renderpage('surat/cetak_block');
+		$this->renderpage('surat/cetak_block', $data);
 	}
 
 	public function cetak_Semi($id)
@@ -70,7 +70,7 @@ class Create extends Core {
 		}
 
 		$data['surat'] = $this->m_surat->getSurat($id);
-		$this->renderpage('surat/cetak_semiblock');
+		$this->renderpage('surat/cetak_semiblock', $data);
 	}
 
 

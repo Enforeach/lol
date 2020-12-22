@@ -23,14 +23,19 @@ if ($surat->lampiran == 0) {
 }
 $content = "
 <html> 
-<body>
-<div style='position: absolute;'>
-<img id='profileImage' width='80' height='80' src='".site_url('images/logo.png')."'
-style='border: 1px solid gray;
-margin-left: 100px;
-margin-right: auto;
-border-radius: 50%;'/>
-</div>
+<body>";
+if (!empty($surat->logo)) {
+$content .= "<div style='position: absolute;'>
+<img id='profileImage' width='80' height='80' src='".site_url('images/logo_surat/').$surat->logo."'
+                                                          style='border: 1px solid gray;
+                                                          margin-left: 100px;
+                                                          margin-right: auto;
+                                                          border-radius: 50%;'/>
+                                                          </div>";
+
+}
+
+$content .= "
 <p style='text-align: center; font-size:17px;'>".$surat->nama_instansi."</p>
 <p style='text-align: center; line-height: 1px;padding-top: -10px'>".$surat->alamat."</p>
 <p style='text-align: center; line-height: 1px;padding-top: -3px'>".$surat->telp."</p>

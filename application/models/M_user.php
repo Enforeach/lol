@@ -86,15 +86,14 @@ class M_user extends CI_Model
 
   public function editUser($username)
   {
-    if (empty($this->input->post('password'))) {
+    if (empty($this->input->post('PASSWORD'))) {
      $data = array(
       'username' => $this->input->post('username'),
-      'nama_lengkap' => $this->input->post('nama_lengkap'),
-      'FOTO' => $query->FOTO.'.'.$ext
+      'nama_lengkap' => $this->input->post('nama_lengkap')
     );
    }else {
      $data = array(
-      'password' => md5($this->input->post('password')),
+      'password' => md5("akusayangkamu:*".$this->input->post('PASSWORD')),
     );
    }
    
