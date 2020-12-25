@@ -95,13 +95,14 @@ class Create extends Core {
 		$this->renderpage('surat/dinas', $data);
 	}
 
-	public function Niaga()
+	public function Niaga($tipe)
 	{
 		if(!$this->isLogin){
 			redirect('Auth');
 			die();
 		}
-		$this->renderpage('surat/niaga');
+		$data['tipe'] = $tipe;
+		$this->renderpage('surat/niaga', $data);
 	}
 	public function add_surat_pribadi()
 	{
@@ -129,7 +130,7 @@ class Create extends Core {
 			'salam_penutup' => $salam_penutup,
 			'username' => $this->session->userdata('username'),
 			'id_isi' => $id_isi,
-			'id' => 1
+			'id' => "pribadi"
 		);
 		$this->m_surat->add_surata('tb_detail_surat', $data);
 
@@ -166,9 +167,14 @@ class Create extends Core {
 		$salam_penutup = $this->input->post('salam_penutup');
 		$nama = $this->input->post('nama');
 		$jabatan = $this->input->post('jabatan');
+		if (!empty($this->m_surat->getCountSurat("tb_detail_surat"))) {
+			$id_isi = $this->m_surat->getCountSurat("tb_detail_surat");
+			$id_isi = $id_isi + 1;				
 
-		$id_isi = $this->m_surat->getCountSurat("tb_detail_surat");
-		$id_isi = $id_isi + 1;				
+		}else {
+			$id_isi = 1;	
+		}
+		
 
 		$id = $this->m_surat->getMax();
 		$id = $id + 1;
@@ -198,7 +204,7 @@ class Create extends Core {
 				'salam_penutup' => $salam_penutup,
 				'username' => $this->session->userdata('username'),
 				'id_isi' => $id_isi,
-				'id' => 2
+				'id' => 'dinas'
 			);
 		}else {
 			$data = array(
@@ -221,7 +227,96 @@ class Create extends Core {
 				'salam_penutup' => $salam_penutup,
 				'username' => $this->session->userdata('username'),
 				'id_isi' => $id_isi,
-				'id' => 2
+				'id' => 'dinas'
+			);
+		}
+
+
+		$this->m_surat->add_surata('tb_detail_surat', $data);
+
+		echo json_encode($id_isi);
+
+	}
+	public function add_surat_niaga()
+	{
+		$nama_instansi = $this->input->post('kop_surat');
+		$jenis_instansi = $this->input->post('jenis_instansi');
+		$alamat = $this->input->post('alamat');
+		$telp = $this->input->post('telp');
+		$nomor = $this->input->post('nomor');
+		$lampiran = $this->input->post('lampiran');
+		$perihal = $this->input->post('perihal');
+
+		$nama_tujuan = $this->input->post('nama_tujuan');
+		$alamat_tujuan = $this->input->post('alamat_tujuan');
+		$kota = $this->input->post('kota');
+		$kota_tujuan = $this->input->post('kota_tujuan');
+
+		$tanggal = $this->input->post('tanggal');
+		$salam_pembuka = $this->input->post('salam_pembuka');
+		$salam_penutup = $this->input->post('salam_penutup');
+		$nama = $this->input->post('nama');
+		$jabatan = $this->input->post('jabatan');
+		if (!empty($this->m_surat->getCountSurat("tb_detail_surat"))) {
+			$id_isi = $this->m_surat->getCountSurat("tb_detail_surat");
+			$id_isi = $id_isi + 1;				
+
+		}else {
+			$id_isi = 1;	
+		}
+
+		$id = $this->m_surat->getMax();
+		$id = $id + 1;
+
+
+		if($this->upload_images($id, './images/logo_surat', 'imageUpload')){
+			$file_ext = explode('.', $_FILES['imageUpload']['name']);
+			$file_ext = strtolower(end($file_ext));
+
+			$data = array(
+				'nama_instansi' => $nama_instansi,
+				'jenis_instansi' => $jenis_instansi,
+				'alamat' => $alamat,
+				'telp' => $telp,
+				'kota' => $kota,
+				'nomor' => $nomor,
+				'lampiran' => $lampiran,
+				'perihal' => $perihal,
+				'alamat_tujuan' => $alamat_tujuan,
+				'nama_tujuan' => $nama_tujuan,
+				'kota_tujuan' => $kota_tujuan,
+				'jabatan' => $jabatan,
+				'logo' => $id.".".$file_ext,
+				'nama' => $nama,
+				'tgl' => $tanggal,
+				'salam_pembuka' => $salam_pembuka,
+				'salam_penutup' => $salam_penutup,
+				'username' => $this->session->userdata('username'),
+				'id_isi' => $id_isi,
+				'id' => 'niaga'
+			);
+		}else {
+			$data = array(
+				'nama_instansi' => $nama_instansi,
+				'jenis_instansi' => $jenis_instansi,
+				'alamat' => $alamat,
+				'telp' => $telp,
+				'nomor' => $nomor,
+				'kota' => $kota,
+				'lampiran' => $lampiran,
+				'perihal' => $perihal,
+				'alamat_tujuan' => $alamat_tujuan,
+				'nama_tujuan' => $nama_tujuan,
+				'kota_tujuan' => $kota_tujuan,
+				'jabatan' => $jabatan,
+				'logo' => $_FILES['imageUpload']['name'],
+				'nama' => $nama,
+				'tgl' => $tanggal,
+				'salam_pembuka' => $salam_pembuka,
+				'salam_penutup' => $salam_penutup,
+				'username' => $this->session->userdata('username'),
+				'id_isi' => $id_isi,
+				'id' => 'niaga'
 			);
 		}
 
@@ -281,8 +376,7 @@ class Create extends Core {
 					'salam_pembuka' => $salam_pembuka,
 					'salam_penutup' => $salam_penutup,
 					'username' => $this->session->userdata('username'),
-					'id_isi' => $id_isi,
-					'id' => 2
+					'id_isi' => $id_isi
 				);
 			}
 		}else {
@@ -303,8 +397,7 @@ class Create extends Core {
 				'salam_pembuka' => $salam_pembuka,
 				'salam_penutup' => $salam_penutup,
 				'username' => $this->session->userdata('username'),
-				'id_isi' => $id_isi,
-				'id' => 2
+				'id_isi' => $id_isi
 			);
 		}
 

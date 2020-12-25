@@ -191,6 +191,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-9">
@@ -212,12 +213,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-                                                            <!-- <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <button type="button" class="btn btn-danger" id="hapusa"><i class="fa fa-trash"></i></button>
-                                                                </div>
-                                                            </div> -->
                                                         </div>
                                                     </div>
 
@@ -269,7 +264,7 @@
                                                         <input type="hidden" name="cek" id="cek">
                                                         <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
                                                         <button type="submit" name="save" onclick="p('simpan')" id="save" value="simpan" class="btn btn-primary pull-right">simpan</button>
-                                                        <button type="submit" name="save" onclick="p('cet')" id="save" value="cetak" class="btn btn-primary pull-right">simpan & cetak</button>
+                                                        <button type="submit" style="margin-right: 20px;" name="save" onclick="p('cet')" id="save" value="cetak" class="btn btn-primary pull-right">simpan & cetak</button>
                                                         
                                                     </div>
                                                 </div>
@@ -373,7 +368,7 @@
                 Baris += '<label for="" class="control-label" style="color: gray; font-size: 12px;">List '+list+'</label>';
                 Baris += '<div class="row">';
                 Baris += '<div class="col-md-1">';
-                Baris += '<label for="" class="control-label" style="color: gray; font-size: 15px; padding:22px 10px 10px 35px;">'+list+'.</label>';
+                Baris += '<label for="" class="control-label" style="color: gray; font-size: 15px; padding:22px 10px 10px 20px;">'+list+'.</label>';
                 Baris += '</div>';
                 Baris += '<div class="col-md-8">';
                 Baris += '<textarea type="text" name="isi'+line+'" id="isi'+line+'" onblur="lololo(\'isi\'+line);" class="form-control" value=""> </textarea>';
@@ -435,7 +430,7 @@
                     $.ajax({
                       type:'POST',
                       data:new FormData(this),
-                      url:'<?= site_url('Create/add_surat_dinas') ?>',
+                      url:'<?= site_url('Create/add_surat_niaga') ?>',
                       processData: false,
                       contentType: false,  
                       cache:false,
@@ -458,7 +453,7 @@
                     $.ajax({
                       type:'POST',
                       data:new FormData(this),
-                      url:'<?= site_url('Create/add_surat_dinas') ?>',
+                      url:'<?= site_url('Create/add_surat_niaga') ?>',
                       processData: false,
                       contentType: false,  
                       cache:false,
@@ -472,15 +467,15 @@
                           success: function(hasil){
                             if (data.get("tipe") == "Indented") {
 
-                                success_sweet('Surat berhasil disimpan.','cetak_Indented/'+hasil);
-                            }if (data.get("tipe") == "Hanging") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Hanging/'+hasil);
-                            }if (data.get("tipe") == "Block") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Block/'+hasil);
-                            }if (data.get("tipe") == "Semi") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Semi/'+hasil);
-                            }if (data.get("tipe") == "Full") {
-                                success_sweet('Surat berhasil disimpan.','cetak_Full/'+hasil);
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Indented/") ?>'+hasil);
+                            }if (data.get("tipe") == "Hanging") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Hanging/") ?>'+hasil);
+                            }if (data.get("tipe") == "Block") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Block/") ?>'+hasil);
+                            }if (data.get("tipe") == "Semi") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Semi/") ?>'+hasil);
+                            }if (data.get("tipe") == "Full") {                                
+                                success_sweet('Surat berhasil disimpan.','<?= site_url("Create/cetak_Full/") ?>'+hasil);
                             }
 
 

@@ -62,11 +62,15 @@ class Side extends Core {
 		$this->renderpage('side/history', $data);
 	}
 
-	public function edit_surat_pribadi()
+	public function edit_surat_p($title)
 	{
-		$this->renderpage('surat/edit_pribadi');
-	}
+		$data['title'] = $title; //dinas/niaga
+		$data['tipe'] = 'ben gak muncul error';
+		$data['surat'] = $this->m_surat->getSurat($title);
 
+		$data['isi'] = $this->m_surat->getAll($this->m_surat->getIsi($title));
+		$this->renderpage('surat/edit_pribadi', $data);
+	}
 	public function edit_surat($title)
 	{
 		$data['title'] = $title; //dinas/niaga

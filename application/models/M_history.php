@@ -110,6 +110,7 @@ class M_history extends CI_Model
     $search = $this->_post('search');
     if($search['value'] != ''){
       $key = $search['value'];
+      $this->db->like('id', $key);
       $this->db->like('tgl', $key);
       $this->db->or_like('nama_instansi', $key);
       $this->db->or_like('nomor', $key);
@@ -141,13 +142,7 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id == 1) {
-        $jenis = 'Pribadi';
-      }elseif ($val->id == 2) {
-        $jenis = 'Dinas';
-      }else {
-        $jenis = "Niaga";
-      }
+
       $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
       <a href="'.site_url('side/history_edit/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
@@ -155,7 +150,7 @@ class M_history extends CI_Model
 
       $output['data'][] = array(
         $btn,
-        $jenis,
+        $val->id,
         $val->tgl,
         $val->nama_instansi,
         $val->nomor
@@ -176,6 +171,7 @@ class M_history extends CI_Model
     if($search['value'] != ''){
       $key = $search['value'];
       $this->db->like('tgl', $key);
+      $this->db->like('id', $key);
       $this->db->or_like('nama_instansi', $key);
       $this->db->or_like('nomor', $key);
     }
@@ -191,7 +187,7 @@ class M_history extends CI_Model
     $this->db->select("SQL_CALC_FOUND_ROWS *" ,FALSE);
     $this->db->from("tb_detail_surat");
     $this->db->where('username', $this->session->userdata('username'));
-    $this->db->where('id', '1');
+    $this->db->where('id', 'pribadi');
     $sql = $this->db->get();
     $q = $sql->result();
     $this->db->select("FOUND_ROWS() AS total_row");
@@ -207,21 +203,15 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id == 1) {
-        $jenis = 'Pribadi';
-      }elseif ($val->id == 2) {
-        $jenis = 'Dinas';
-      }else {
-        $jenis = "Niaga";
-      }
+
       $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('Side/edit_surat_pribadi/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
+      <a href="'.site_url('Side/edit_surat_p/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
 
       $output['data'][] = array(
         $btn,
-        $jenis,
+        $val->id,
         $val->tgl,
         $val->nama_instansi,
         $val->nomor
@@ -242,6 +232,7 @@ class M_history extends CI_Model
     if($search['value'] != ''){
       $key = $search['value'];
       $this->db->like('tgl', $key);
+      $this->db->like('id', $key);
       $this->db->or_like('nama_instansi', $key);
       $this->db->or_like('nomor', $key);
     }
@@ -257,7 +248,7 @@ class M_history extends CI_Model
     $this->db->select("SQL_CALC_FOUND_ROWS *" ,FALSE);
     $this->db->from("tb_detail_surat");
     $this->db->where('username', $this->session->userdata('username'));
-    $this->db->where('id', '2');
+    $this->db->where('id', 'dinas');
     $sql = $this->db->get();
     $q = $sql->result();
     $this->db->select("FOUND_ROWS() AS total_row");
@@ -273,13 +264,7 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id == 1) {
-        $jenis = 'Pribadi';
-      }elseif ($val->id == 2) {
-        $jenis = 'Dinas';
-      }else {
-        $jenis = "Niaga";
-      }
+
       $btn = ' <a href="'.site_url('Side/detail_surat/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
       <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
       <a href="#" data-url="'.site_url('Side/delete_surat/'.$val->id_detail).'" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
@@ -287,7 +272,7 @@ class M_history extends CI_Model
 
       $output['data'][] = array(
         $btn,
-        $jenis,
+        $val->id,
         $val->tgl,
         $val->nama_instansi,
         $val->nomor
@@ -308,6 +293,7 @@ class M_history extends CI_Model
     if($search['value'] != ''){
       $key = $search['value'];
       $this->db->like('tgl', $key);
+      $this->db->like('id', $key);
       $this->db->or_like('nama_instansi', $key);
       $this->db->or_like('nomor', $key);
     }
@@ -323,7 +309,7 @@ class M_history extends CI_Model
     $this->db->select("SQL_CALC_FOUND_ROWS *" ,FALSE);
     $this->db->from("tb_detail_surat");
     $this->db->where('username', $this->session->userdata('username'));
-    $this->db->where('id', '3');
+    $this->db->where('id', 'niaga');
     $sql = $this->db->get();
     $q = $sql->result();
     $this->db->select("FOUND_ROWS() AS total_row");
@@ -339,21 +325,14 @@ class M_history extends CI_Model
     );
 
     foreach ($q as $val) {
-      if ($val->id == 1) {
-        $jenis = 'Pribadi';
-      }elseif ($val->id == 2) {
-        $jenis = 'Dinas';
-      }else {
-        $jenis = "Niaga";
-      }
-      $btn = ' <a href="'.site_url('side/history_detail/'.$val->id_detail).'" target="_blank" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
-      <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
-      <a href="#" data-url="" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
+     $btn = ' <a href="'.site_url('Side/detail_surat/'.$val->id_detail).'" class="btn btn-primary btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Lihat & Cetak"><i class="mdi mdi-eye"></i></a>
+      <a href="'.site_url('Side/edit_surat/'.$val->id_detail).'" class="btn btn-info btn-xs" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Edit Surat"><i class="mdi mdi-pencil"></i></a>
+      <a href="#" data-url="'.site_url('Side/delete_surat/'.$val->id_detail).'" class="btn btn-danger btn-xs btn-delete" style="text-align: center; width: 37px;" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>';
 
       $output['data'][] = array(
         $btn,
-        $jenis,
+        $val->id,
         $val->tgl,
         $val->nama_instansi,
         $val->nomor

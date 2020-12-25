@@ -45,6 +45,7 @@ class M_user extends CI_Model
       'nama_lengkap' => $this->input->post('nama_lengkap'),
     );
     $this->session->set_userdata($data);
+  
   }
   public function doLogin()
   {

@@ -427,7 +427,7 @@ function tgl_indonesia($tanggal){
               <div>
                 <img id="profileImage2" src="" alt="" style="width: 100%;"/>
                 <center><b><u><p id="haha2"> </p></u></b></center>
-                <center><a href="#" id="lolo" class="btn btn-warning">Buat</a></center>
+                <center><a href="#" id="lala" class="btn btn-warning">Buat</a></center>
               </div>
             </div>
           </div>
@@ -458,6 +458,7 @@ function tgl_indonesia($tanggal){
       document.getElementById("profileImage2").src = "<?= site_url('images/Style/Indented.jpg'); ?>";
       document.getElementById("haha").innerHTML = x+" Style";
       document.getElementById("haha2").innerHTML = x+" Style";
+      document.getElementById("lala").href = "<?= site_url('Create/Niaga/Indented') ?>" ;
       document.getElementById("lolo").href = "<?= site_url('Create/Dinas/Indented') ?>" ;
     }
     if (x == 'Hanging') {
@@ -465,6 +466,7 @@ function tgl_indonesia($tanggal){
       document.getElementById("profileImage2").src = "<?= site_url('images/Style/Hanging.jpg'); ?>";
       document.getElementById("haha").innerHTML = x+" Style";
       document.getElementById("haha2").innerHTML = x+" Style";
+      document.getElementById("lala").href = "<?= site_url('Create/Niaga/Hanging') ?>" ;
       document.getElementById("lolo").href = "<?= site_url('Create/Dinas/Hanging') ?>" ;
     }
     if (x == 'Block') {
@@ -472,6 +474,7 @@ function tgl_indonesia($tanggal){
       document.getElementById("profileImage2").src = "<?= site_url('images/Style/Block.jpg'); ?>";
       document.getElementById("haha").innerHTML = x+" Style";
       document.getElementById("haha2").innerHTML = x+" Style";
+      document.getElementById("lala").href = "<?= site_url('Create/Niaga/Block') ?>" ;
       document.getElementById("lolo").href = "<?= site_url('Create/Dinas/Block') ?>" ;
     }
     if (x == 'Semi_Block') {
@@ -479,6 +482,7 @@ function tgl_indonesia($tanggal){
       document.getElementById("profileImage2").src = "<?= site_url('images/Style/Semi_Block.jpg'); ?>";
       document.getElementById("haha").innerHTML = "Semi Block Style";
       document.getElementById("haha2").innerHTML = x+" Style";
+      document.getElementById("lala").href = "<?= site_url('Create/Niaga/Semi') ?>" ;
       document.getElementById("lolo").href = "<?= site_url('Create/Dinas/Semi') ?>" ;
     }
     if (x == 'Full_Block') {
@@ -486,6 +490,7 @@ function tgl_indonesia($tanggal){
       document.getElementById("profileImage").src = "<?= site_url('images/Style/Full_Block.jpg'); ?>";
       document.getElementById("haha").innerHTML = "Full Block Style";
       document.getElementById("haha2").innerHTML = x+" Style";
+      document.getElementById("lala").href = "<?= site_url('Create/Niaga/Full') ?>" ;
       document.getElementById("lolo").href = "<?= site_url('Create/Dinas/Full') ?>" ;
     }
   }
