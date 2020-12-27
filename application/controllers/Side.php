@@ -43,6 +43,16 @@ class Side extends Core {
 		$data['isi'] = $this->m_surat->getAll($this->m_surat->getIsi($title));
 		$this->renderpage('surat/detail_surat', $data);
 	}
+
+		public function detail_surat_pribadi($title)
+	{
+		$data['title'] = $title; //dinas/niaga
+		$data['surat'] = $this->m_surat->getSurat($title);
+
+		$data['isi'] = $this->m_surat->getAll($this->m_surat->getIsi($title));
+		$this->renderpage('surat/detail_surat_pribadi', $data);
+	}
+
 	public function Rujukan()
 	{
 		if(!$this->isLogin){

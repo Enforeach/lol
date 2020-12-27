@@ -307,7 +307,6 @@
                                                             <div class="col-md-12 mt-5">
                                                                 <input type="hidden" name="cek" id="cek">
                                                                 <button type="button" class="btn btn-round" onclick="window.location.href='<?= site_url('Home'); ?>'"><i class="fa fa-angle-left"></i>Kembali</i></button>
-                                                                <button type="submit" name="save" onclick="p('simpan')" id="save" value="simpan" class="btn btn-primary pull-right">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>

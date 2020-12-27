@@ -123,6 +123,9 @@ foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 	if ($key->jenis == "par") {
 		$content .="<table>
 		<tr>
+		<td style='height: 10px;'> </td>
+		</tr>
+		<tr>
 		<td><p>".$key->isi."</p></td>
 		</tr>
 		<tr>
@@ -132,9 +135,6 @@ foreach ($this->m_surat->getAll($surat->id_isi) as $key) {
 		$no = 1;
 	}else {
 		$content .="<table>
-		<tr>
-		<td style='height: 10px;'> </td>
-		</tr>
 		<tr>
 		<td style='vertical-align: top;'><p>".$no.".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
 		<td><p>".$key->isi."</p></td>
