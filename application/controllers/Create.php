@@ -408,6 +408,41 @@ class Create extends Core {
 		echo json_encode($id_isi);
 
 	}
+	public function edit_surat()
+	{
+		$id_detail = $this->input->post('id_detail');
+		$tempat = $this->input->post('tempat');
+		$tanggal = $this->input->post('tanggal');
+		$nama_tujuan = $this->input->post('nama_tujuan');
+		$kota_tujuan = $this->input->post('kota_tujuan');
+		$salam_pembuka = $this->input->post('salam_pembuka');
+		$salam_penutup = $this->input->post('salam_penutup');
+		$nama = $this->input->post('nama');
+
+		$id_isi = $this->m_surat->getIsi($id_detail);
+		$id_isi = $id_isi + 1;
+
+		$id = $this->m_surat->getMax();
+		$id = $id + 1;
+
+		$data = array(
+			'tempat' => $tempat,
+			'nama' => $nama,
+			'tgl' => $tanggal,
+			'nama_tujuan' => $nama_tujuan,
+			'kota_tujuan' => $kota_tujuan,
+			'salam_pembuka' => $salam_pembuka,
+			'salam_penutup' => $salam_penutup,
+			'username' => $this->session->userdata('username'),
+			'id_isi' => $id_isi
+		);
+
+		$this->m_surat->edit_surata('tb_detail_surat', $data, $id_detail);
+		$where = array('id_isi' => $id_isi);
+		$this->m_surat->Surat_delete($where,'tb_isi');		
+		echo json_encode($id_isi);
+
+	}
 	public function isi($id)
 	{
 		$id_isi = $id;				

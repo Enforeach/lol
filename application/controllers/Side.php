@@ -61,7 +61,22 @@ class Side extends Core {
 		$data['tipe'] = $tipe;
 		$this->renderpage('side/history', $data);
 	}
+	public function edit_surat_All($title)
+	{
 
+		$data['title'] = $title; //dinas/niaga
+		$data['tipe'] = 'ben gak muncul error';
+		$data['surat'] = $this->m_surat->getSurat($title);
+
+		$data['isi'] = $this->m_surat->getAll($this->m_surat->getIsi($title));
+		if ($this->m_surat->getJenis($title) == "pribadi") {
+			$this->renderpage('surat/edit_pribadi', $data);
+		}else {
+			
+			$this->renderpage('surat/edit_surat_d_n', $data);
+		}
+
+	}
 	public function edit_surat_p($title)
 	{
 		$data['title'] = $title; //dinas/niaga

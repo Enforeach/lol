@@ -17,6 +17,37 @@ class M_surat extends CI_Model
     $q = $this->db->get()->row();
     return $q->total;  
   }
+    public function getCountSuratUs() {
+    $this->db->select("count(id_detail) as total");
+    $this->db->from("tb_detail_surat");
+    $this->db->where('username', $this->session->userdata('username'));
+    $q = $this->db->get()->row();
+    return $q->total;  
+  }
+  public function getCountSuratPrib() {
+    $this->db->select("count(id_detail) as total");
+    $this->db->from("tb_detail_surat");
+    $this->db->where('username', $this->session->userdata('username'));
+    $this->db->where('id', 'pribadi');
+    $q = $this->db->get()->row();
+    return $q->total;  
+  }
+    public function getCountSuratDin() {
+    $this->db->select("count(id_detail) as total");
+    $this->db->from("tb_detail_surat");
+    $this->db->where('username', $this->session->userdata('username'));
+    $this->db->where('id', 'dinas');
+    $q = $this->db->get()->row();
+    return $q->total;  
+  }
+    public function getCountSuratNia() {
+    $this->db->select("count(id_detail) as total");
+    $this->db->from("tb_detail_surat");
+    $this->db->where('username', $this->session->userdata('username'));
+    $this->db->where('id', 'niaga');
+    $q = $this->db->get()->row();
+    return $q->total;  
+  }
     public function getFoto($id, $foto)
   {
     $this->db->select(''.$foto.' as foto');
@@ -59,6 +90,13 @@ class M_surat extends CI_Model
     $this->db->where('id_detail', $id);
     $q = $this->db->get()->row();
     return $q->id_isi;  
+  }
+    public function getJenis($id) {
+    $this->db->select("id");
+    $this->db->from("tb_detail_surat");
+    $this->db->where('id_detail', $id);
+    $q = $this->db->get()->row();
+    return $q->id;  
   }
   public function getAll($id)
   {

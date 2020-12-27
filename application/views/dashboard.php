@@ -1,4 +1,29 @@
 <?php
+if ($this->m_surat->getCountSuratUs() != 0) {
+
+  $countall = $this->m_surat->getCountSuratUs();
+}else {
+  $countall = 0;
+}
+
+if ($this->m_surat->getCountSuratPrib() != 0) {
+
+  $countprib = $this->m_surat->getCountSuratPrib();
+}else {
+  $countprib = 0;
+}
+if ($this->m_surat->getCountSuratDin() != 0) {
+
+  $countdin = $this->m_surat->getCountSuratDin();
+}else {
+  $countdin = 0;
+}
+if ($this->m_surat->getCountSuratNia() != 0) {
+
+  $countnia = $this->m_surat->getCountSuratNia();
+}else {
+  $countnia = 0;
+}
 function tgl_indonesia($tanggal){
 	$bulan = array (
 		1 =>   'Januari',
@@ -121,7 +146,7 @@ function tgl_indonesia($tanggal){
               <p class="mb-0 text-right" style="color: black">History</p>
               <div class="fluid-container">
                 <h3 class="font-weight-medium text-right mb-0" style="color: black">
-                  1 Data
+                  <?= $countall ?> Data
                 </h3>
               </div>
             </div>
@@ -146,7 +171,7 @@ function tgl_indonesia($tanggal){
                         <p class="mb-0 text-right">Semua Surat</p>
                         <div class="fluid-container">
                           <p class="font-weight-medium text-right mb-0">
-                            1 Data
+                            <?= $countall ?> Data
                           </p>
                         </div>
                       </div>
@@ -170,7 +195,7 @@ function tgl_indonesia($tanggal){
                         <p class="mb-0 text-right">Surat Pribadi</p>
                         <div class="fluid-container">
                           <p class="font-weight-medium text-right mb-0">
-                            1 Data
+                            <?= $countprib ?> Data
                           </p>
                         </div>
                       </div>
@@ -194,7 +219,7 @@ function tgl_indonesia($tanggal){
                         <p class="mb-0 text-right">Surat Dinas</p>
                         <div class="fluid-container">
                           <p class="font-weight-medium text-right mb-0">
-                            1 Data
+                            <?= $countdin ?> Data
                           </p>
                         </div>
                       </div>
@@ -218,7 +243,7 @@ function tgl_indonesia($tanggal){
                         <p class="mb-0 text-right">Surat Niaga</p>
                         <div class="fluid-container">
                           <p class="font-weight-medium text-right mb-0">
-                            1 Data
+                            <?= $countnia ?> Data
                           </p>
                         </div>
                       </div>

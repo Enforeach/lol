@@ -379,6 +379,7 @@
                 var sav = "";
                 $('#tambaha').click(function(){
 
+                        $("#lp").remove();
                     jenis_isi.push('par');
                     $("#trash"+line).remove();
                     list = 0;
@@ -408,6 +409,7 @@
 
                 $('#tambahlist').click(function(){
 
+                        $("#lp").remove();
                     jenis_isi.push('li');
                     $("#trash"+line).remove();
                     list = list + 1;
