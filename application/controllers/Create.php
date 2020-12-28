@@ -113,8 +113,15 @@ class Create extends Core {
 		$salam_pembuka = $this->input->post('salam_pembuka');
 		$salam_penutup = $this->input->post('salam_penutup');
 		$nama = $this->input->post('nama');
-		$id_isi = $this->m_surat->getCountSurat("tb_detail_surat");
-		$id_isi = $id_isi + 1;				
+
+		if (!empty($this->m_surat->getCountSurat("tb_detail_surat"))) {
+			$id_isi = $this->m_surat->getCountSurat("tb_detail_surat");
+			$id_isi = $id_isi + 1;				
+
+		}else {
+			$id_isi = 1;	
+		}
+
 		$isi    = $_POST["isi"];
 		$isi    = json_decode("$isi", true);
 

@@ -12,11 +12,12 @@ class M_surat extends CI_Model
     return $this->input->post($name , $xss);
   }
   public function getCountSurat($db) {
-    $this->db->select("count(id_detail) as total");
+    $this->db->select_max("id_isi");
     $this->db->from($db);
     $q = $this->db->get()->row();
-    return $q->total;  
+    return $q->id_isi;  
   }
+
     public function getCountSuratUs() {
     $this->db->select("count(id_detail) as total");
     $this->db->from("tb_detail_surat");
