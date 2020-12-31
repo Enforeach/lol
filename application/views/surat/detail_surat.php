@@ -156,7 +156,7 @@
                                                                     <label for="" class="control-label">Alamat</label>
                                                                     <div>
                                                                         <div class="">
-                                                                            <textarea type="text" disabled="" name="alamat_tujuan" class="form-control" value="<?= $surat->alamat_tujuan ?>"> </textarea>
+                                                                            <textarea type="text" disabled="" name="alamat_tujuan" class="form-control"> <?= $surat->alamat_tujuan ?></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>

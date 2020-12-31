@@ -159,6 +159,7 @@ class Create extends Core {
 		$nama_instansi = $this->input->post('kop_surat');
 		$jenis_instansi = $this->input->post('jenis_instansi');
 		$alamat = $this->input->post('alamat');
+		$website = $this->input->post('website');
 		$telp = $this->input->post('telp');
 		$nomor = $this->input->post('nomor');
 		$lampiran = $this->input->post('lampiran');
@@ -199,6 +200,7 @@ class Create extends Core {
 				'kota' => $kota,
 				'nomor' => $nomor,
 				'lampiran' => $lampiran,
+				'website' => $website,
 				'perihal' => $perihal,
 				'alamat_tujuan' => $alamat_tujuan,
 				'nama_tujuan' => $nama_tujuan,
@@ -220,6 +222,7 @@ class Create extends Core {
 				'alamat' => $alamat,
 				'telp' => $telp,
 				'nomor' => $nomor,
+				'website' => $website,
 				'kota' => $kota,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,
@@ -249,6 +252,7 @@ class Create extends Core {
 		$nama_instansi = $this->input->post('kop_surat');
 		$jenis_instansi = $this->input->post('jenis_instansi');
 		$alamat = $this->input->post('alamat');
+		$website = $this->input->post('website');
 		$telp = $this->input->post('telp');
 		$nomor = $this->input->post('nomor');
 		$lampiran = $this->input->post('lampiran');
@@ -287,6 +291,7 @@ class Create extends Core {
 				'telp' => $telp,
 				'kota' => $kota,
 				'nomor' => $nomor,
+				'website' => $website,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,
 				'alamat_tujuan' => $alamat_tujuan,
@@ -309,6 +314,7 @@ class Create extends Core {
 				'alamat' => $alamat,
 				'telp' => $telp,
 				'nomor' => $nomor,
+				'website' => $website,
 				'kota' => $kota,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,
@@ -339,6 +345,7 @@ class Create extends Core {
 		$nama_instansi = $this->input->post('kop_surat');
 		$jenis_instansi = $this->input->post('jenis_instansi');
 		$alamat = $this->input->post('alamat');
+		$website = $this->input->post('website');
 		$telp = $this->input->post('telp');
 		$nomor = $this->input->post('nomor');
 		$lampiran = $this->input->post('lampiran');
@@ -371,6 +378,7 @@ class Create extends Core {
 					'alamat' => $alamat,
 					'telp' => $telp,
 					'nomor' => $nomor,
+					'website' => $website,
 					'lampiran' => $lampiran,
 					'perihal' => $perihal,
 					'alamat_tujuan' => $alamat_tujuan,
@@ -392,6 +400,7 @@ class Create extends Core {
 				'jenis_instansi' => $jenis_instansi,
 				'alamat' => $alamat,
 				'telp' => $telp,
+				'website' => $website,
 				'nomor' => $nomor,
 				'lampiran' => $lampiran,
 				'perihal' => $perihal,

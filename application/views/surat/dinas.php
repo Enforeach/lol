@@ -146,7 +146,7 @@
                                                                 <div class="form-group">
                                                                     <label for="" class="control-label">Nama Instansi</label>
                                                                     <div>
-                                                                        <input type="text" name="nama_tujuan" class="form-control" value="" placeholder="contoh: PT. KARYA JAYA">
+                                                                        <input type="text" name="nama_tujuan" class="form-control" placeholder="contoh: PT. KARYA JAYA">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -155,7 +155,7 @@
                                                                     <label for="" class="control-label">Alamat</label>
                                                                     <div>
                                                                         <div class="">
-                                                                            <textarea type="text" name="alamat_tujuan" class="form-control" value=""> </textarea>
+                                                                            <textarea type="text" name="alamat_tujuan" class="form-control"> </textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
