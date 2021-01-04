@@ -220,6 +220,7 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-9">
                                                                                         <textarea type="text" name="isi<?=$no?>" id="isi<?=$no?>" onblur="lololo('isi<?=$no?>');" class="form-control" value=""><?=$key->isi?></textarea>
+                                                                                        <input type="hidden" name="jns<?=$no?>" id="jns<?=$no?>" onblur="input('jns<?=$no?>');" class="form-control" value="<?=$key->jenis?>"></input>
                                                                                     </div>
 
                                                                                     <input type="hidden" id="pantau<?=$no?>" class="form-control" value="<?=$key->jenis?>">
@@ -373,7 +374,7 @@
                     isi.push($('#isi'+i).val())
                 }
                 for (var i = 1; i <= line; i++) {
-                    jenis_isi.push($('#isi'+i).val())
+                    jenis_isi.push($('#jns'+i).val())
                 }
                 var list = 0;
                 var sav = "";
